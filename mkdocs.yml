@@ -1,1 +1,22 @@
-site_name: My Docs
+site_name: ServiceBot Documentation
+theme: 'material'
+extra:
+  logo: "images/logo-white-square.png"
+  social:
+    - type: github-alt
+      link: https://github.com/service-bot
+    - type: twitter
+      link: https://twitter.com/servicebot_io
+theme_dir: 'theme'
+pages:
+  - ServiceBot: index.md
+  - Installation: install.md
+  - Usage: usage.md
+  - Customization: customization.md
+  - Release notes: release-notes.md
+  - Contributing: contributing.md
+  - Roadmap: roadmap.md
+  - License: license.md
+copyright: 'Copyright &copy; 2017 ServiceBot'
+repo_name: service-bot/servicebot-docs
+repo_url: https://github.com/service-bot/servicebot-docs

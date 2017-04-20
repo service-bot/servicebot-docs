@@ -1,6 +1,5 @@
-# Welcome to MkDocs
+# ServiceBot - Open Source Service Automation
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
 
 ## Commands
 
@@ -13,5 +12,5 @@ For full documentation visit [mkdocs.org](http://mkdocs.org).
 
     mkdocs.yml    # The configuration file.
     docs/
-        index.md  # The documentation homepage.
+        index.md  # Tasaasasasasashe documentation homepage.
         ...       # Other markdown pages, images and other files.
