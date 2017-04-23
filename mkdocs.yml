@@ -14,8 +14,19 @@ pages:
   - Reference Guide: reference_guide.md
   - Installation: install.md
   - Usage:
-    - For Users: user_usage.md
-    - For Administrators: administration_usage.md
+    - Users:
+      - Create Account: user_create_account.md
+      - Request a Service: user_request_service.md
+      - Approve a Service: user_approve_service.md
+      - Messaging: user_messaging.md
+    - Administrators:
+      - Roles: admin_roles.md
+      - Create a Service Template: admin_create_template.md
+      - Request a Service on behalf of user: admin_request_service.md
+      - Change operation mode: admin_operation_mode.md
+      - Change Branding: admin_branding.md
+      - Change Theme: admin_theme.md
+      - Modify Email Templates: admin_email_templates.md
   - Developers:
     - Customization: customization.md
     - Contributing: contributing.md
