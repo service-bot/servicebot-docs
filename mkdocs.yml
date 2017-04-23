@@ -9,13 +9,19 @@ extra:
       link: https://twitter.com/servicebot_io
 theme_dir: 'theme'
 pages:
-  - ServiceBot: index.md
+  - Introduction: index.md
+  - Getting Started: getting_started.md
+  - Reference Guide: reference_guide.md
   - Installation: install.md
-  - Usage: usage.md
-  - Customization: customization.md
-  - Release notes: release-notes.md
-  - Contributing: contributing.md
+  - Usage:
+    - For Users: user_usage.md
+    - For Administrators: administration_usage.md
+  - Developers:
+    - Customization: customization.md
+    - Contributing: contributing.md
+    - Creating a plugin: plugin.md
   - Roadmap: roadmap.md
+  - Release notes: release-notes.md
   - License: license.md
 copyright: 'Copyright &copy; 2017 ServiceBot'
 repo_name: service-bot/servicebot-docs
