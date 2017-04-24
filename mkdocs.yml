@@ -20,7 +20,7 @@ pages:
       - Request a Service: request_service.md
       - Approve a Service: approve_service.md
       - Messaging: messaging.md
-      - Roles: roles.md
+      - Roles and Permissions: roles.md
       - Change operation mode: operation_mode.md
       - Change Branding: branding.md
       - Change Theme: theme.md
