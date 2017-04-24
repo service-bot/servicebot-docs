@@ -10,19 +10,30 @@
     
 ##Steps
 
-1. Ensure docker, docker-compose, and git are installed
-2. Do a git clone of the deployment 
+1. Install docker if not installed already
+
+    
+    ``sudo wget -qO- https://get.docker.com/ | sh``
+
+2. Install docker-compose
+
+
+    ``sudo curl -o /usr/local/bin/docker-compose -L "https://github.com/docker/compose/releases/download/1.11.2/docker-compose-$(uname -s)-$(uname -m)"``
+
+3. Do a git clone of the deployment 
 
 
     ``git clone  good repo``
     
-3. create the app with docker-compose
+4. Add SMTP email settings to the docker-compose if mail notifications are desired
+    
+5. create the app with docker-compose
 
 
     ``docker-compose up -d``
 
-4. Access the server with web browser, by default on port 80
+6. Access the server with web browser, by default on port 80
 
-5. Enter setup information, if SSL is not setup yet then make sure stripe keys are on test mode
+7. Enter setup information, if SSL is not setup yet then make sure stripe keys are on test mode
 
-6. Your ServiceBot should be ready to go!
+8. Your ServiceBot should be ready to go!
