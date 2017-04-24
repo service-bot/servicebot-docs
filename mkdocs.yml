@@ -20,6 +20,8 @@ pages:
       - Request a Service: request_service.md
       - Approve a Service: approve_service.md
       - Messaging: messaging.md
+      - View Invoices: invoice.md
+      - Give a Refule: refund.md
       - Roles and Permissions: roles.md
       - Change operation mode: operation_mode.md
       - Change Branding: branding.md

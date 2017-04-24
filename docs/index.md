@@ -6,4 +6,4 @@ ServiceBot is built using Javascript and the [Express](https://expressjs.com/) f
 
 We welcome questions and feedback via our [discource community](http://community.servicebot.io/), as well as [contributions](https://github.com/servicebot/servicebot). For general discussion, feel free to visit our [Gitter Chatroom](https://gitter.im/service-bot/Lobby).
 
-We were automation engineers for fortune 500 companies. We were operating a web development company and needed a way to manage our services and subscriptions, so became ServiceBot.
+We are automation engineers for fortune 500 companies. We were operating a web development company and needed a way to manage our services and subscriptions, so became ServiceBot.
