@@ -1,20 +1,23 @@
-# Docker Compose Installation Guide
+# Installation Guide
 
-!!! warning "note"
-    This installation requires **docker** and **docker-compose** be installed on your 
+!!! warning "Note"
+    This installation requires **docker**, **docker-compose**, and **git** be installed on your 
     server
 
 !!! danger
-    ServiceBot requires https in order to make api calls with Stripe live mode,
-    Ensure to have a cert if you want to use this in production. 
+    ServiceBot requires https in order to make api calls with Stripe live mode (test mode will still work),
+    Ensure to have a cert on your server if you want to use this in production. 
     
 ##Steps
 
 1. Ensure docker, docker-compose, and git are installed
 2. Do a git clone of the deployment 
 
+
     ``git clone  good repo``
+    
 3. create the app with docker-compose
+
 
     ``docker-compose up -d``
 

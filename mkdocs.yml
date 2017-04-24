@@ -35,3 +35,5 @@ pages:
 copyright: 'Copyright &copy; 2017 ServiceBot'
 repo_name: service-bot/servicebot-docs
 repo_url: https://github.com/service-bot/servicebot-docs
+markdown_extensions:
+  - admonition
