@@ -15,11 +15,12 @@ pages:
   - Installation: install.md
   - Usage:
       - Create Account: create_account.md
+      - Add a Payment Method: add_payment_method.md
       - Create a Service Template: create_template.md
-      - Roles: roles.md
       - Request a Service: request_service.md
       - Approve a Service: approve_service.md
       - Messaging: messaging.md
+      - Roles: roles.md
       - Change operation mode: operation_mode.md
       - Change Branding: branding.md
       - Change Theme: theme.md
