@@ -1,3 +1,4 @@
+##GPLv3
 Copyright (C) 2017 ServiceBot
 
 This program is free software: you can redistribute it and/or modify

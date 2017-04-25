@@ -29,9 +29,10 @@ pages:
       - Change Theme: theme.md
       - Modify Email Templates: email_templates.md
   - Developers:
-    - Customization: customization.md
     - Contributing: contributing.md
+    - Embed Service in Existing Site: embed.md
     - Creating a plugin: plugin.md
+    - Customization: customization.md
   - Roadmap: roadmap.md
   - Release notes: release-notes.md
   - License: license.md
