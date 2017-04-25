@@ -33,6 +33,7 @@ pages:
     - Embed Service in Existing Site: embed.md
     - Creating a plugin: plugin.md
     - Customization: customization.md
+    - Application Structure: structure.md
   - Roadmap: roadmap.md
   - Release notes: release-notes.md
   - License: license.md
