@@ -22,7 +22,8 @@ pages:
       - Messaging: messaging.md
       - View Invoices: invoice.md
       - Give a Refund: refund.md
-      - Roles and Permissions: roles.md
+      - Understanding Permissions: permissions.md
+      - Modifying Roles: roles.md
       - Navigate Admin Dashboard: admin_dashboard.md
       - Change operation mode: operation_mode.md
       - Change Branding: branding.md
