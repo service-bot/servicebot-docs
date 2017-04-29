@@ -2,43 +2,258 @@
     "docs": [
         {
             "location": "/", 
-            "text": "ServiceBot - Open Source Service Automation\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # Tasaasasasasashe documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
-            "title": "ServiceBot"
+            "text": "ServiceBot Introduction\n\n\nServiceBot is an open source ecommerce and automation platform for services. The objective is to bring enterprise level automation to small and medium sized businesses, as well as bringing forth a new e-commerce platform designed around services.\n\n\nServiceBot is built using Javascript and the \nExpress\n framework on \nNode\n. It is both an open source solution and a managed Platform as a Service (PaaS), available at \nservicebot.io\n.\n\n\nWe welcome questions and feedback via our \ncommunity\n, as well as \ncontributions\n. For general discussion, feel free to visit our \nGitter Chatroom\n.\n\n\nWe are automation engineers for fortune 500 companies. We were operating a web development company and needed a way to manage our services and subscriptions, so became ServiceBot.", 
+            "title": "Introduction"
         }, 
         {
-            "location": "/#servicebot-open-source-service-automation", 
+            "location": "/#servicebot-introduction", 
+            "text": "ServiceBot is an open source ecommerce and automation platform for services. The objective is to bring enterprise level automation to small and medium sized businesses, as well as bringing forth a new e-commerce platform designed around services.  ServiceBot is built using Javascript and the  Express  framework on  Node . It is both an open source solution and a managed Platform as a Service (PaaS), available at  servicebot.io .  We welcome questions and feedback via our  community , as well as  contributions . For general discussion, feel free to visit our  Gitter Chatroom .  We are automation engineers for fortune 500 companies. We were operating a web development company and needed a way to manage our services and subscriptions, so became ServiceBot.", 
+            "title": "ServiceBot Introduction"
+        }, 
+        {
+            "location": "/getting_started/", 
+            "text": "Create Stripe Account!", 
+            "title": "Getting Started"
+        }, 
+        {
+            "location": "/reference_guide/", 
+            "text": "Key Terminology\n\n\nService Template\n\n\nService Templates are used to define the services your business provides, they \ncontain details like pricing, description and contain the fields the user needs to fill out in order to request one\n\n\nService Instance\n\n\nA Service Instance represents a running service, the customer will be able to see\nThe status, approve any charges, and pay for the services they request by viewing their instances\n\n\nRole\n\n\nA role is essentially just a container for permissions, users are assigned roles\n\n\nPermission\n\n\nPermissions make up roles and different parts of servicebot require different permissions in order to access them\n\n\nFunds\n\n\nFunds represent your funding source (credit card), in order to request a service that costs money you need to have a valid funding \nsource in your account\n\n\nService Category\n\n\nService Templates are grouped by categories\n\n\nTransaction\n\n\nSHAR\n\n\nInvoice\n\n\nSHAR\n\n\nSystem Options\n\n\nSystem options are site wide properties that affect things like branding, colors, and settings like registration being enabled/disabled\n\n\nEmail Templates\n\n\nEmail templates detail the different emails that get sent out to users on certain events such as service instance creation or cancellations.", 
+            "title": "Reference Guide"
+        }, 
+        {
+            "location": "/reference_guide/#key-terminology", 
             "text": "", 
-            "title": "ServiceBot - Open Source Service Automation"
+            "title": "Key Terminology"
         }, 
         {
-            "location": "/#commands", 
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
-            "title": "Commands"
+            "location": "/reference_guide/#service-template", 
+            "text": "Service Templates are used to define the services your business provides, they \ncontain details like pricing, description and contain the fields the user needs to fill out in order to request one", 
+            "title": "Service Template"
         }, 
         {
-            "location": "/#project-layout", 
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # Tasaasasasasashe documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
-            "title": "Project layout"
+            "location": "/reference_guide/#service-instance", 
+            "text": "A Service Instance represents a running service, the customer will be able to see\nThe status, approve any charges, and pay for the services they request by viewing their instances", 
+            "title": "Service Instance"
+        }, 
+        {
+            "location": "/reference_guide/#role", 
+            "text": "A role is essentially just a container for permissions, users are assigned roles", 
+            "title": "Role"
+        }, 
+        {
+            "location": "/reference_guide/#permission", 
+            "text": "Permissions make up roles and different parts of servicebot require different permissions in order to access them", 
+            "title": "Permission"
+        }, 
+        {
+            "location": "/reference_guide/#funds", 
+            "text": "Funds represent your funding source (credit card), in order to request a service that costs money you need to have a valid funding \nsource in your account", 
+            "title": "Funds"
+        }, 
+        {
+            "location": "/reference_guide/#service-category", 
+            "text": "Service Templates are grouped by categories", 
+            "title": "Service Category"
+        }, 
+        {
+            "location": "/reference_guide/#transaction", 
+            "text": "SHAR", 
+            "title": "Transaction"
+        }, 
+        {
+            "location": "/reference_guide/#invoice", 
+            "text": "SHAR", 
+            "title": "Invoice"
+        }, 
+        {
+            "location": "/reference_guide/#system-options", 
+            "text": "System options are site wide properties that affect things like branding, colors, and settings like registration being enabled/disabled", 
+            "title": "System Options"
+        }, 
+        {
+            "location": "/reference_guide/#email-templates", 
+            "text": "Email templates detail the different emails that get sent out to users on certain events such as service instance creation or cancellations.", 
+            "title": "Email Templates"
         }, 
         {
             "location": "/install/", 
-            "text": "", 
+            "text": "Installation Guide\n\n\n\n\nNote\n\n\nThis installation requires \ndocker\n, \ndocker-compose\n, and \ngit\n be installed on your \nserver\n\n\n\n\n\n\nDanger\n\n\nServiceBot requires https in order to make api calls with Stripe live mode (test mode will still work),\nEnsure to have a cert on your server if you want to use this in production.\n\n\nCertificates should be named as follows and placed in a single folder\nnot publically accessible on the host system:\n- Keyfile : servicebot.key\n- Certificate : servicebot.crt\n- CA : servicebot_bundle.crt\n\n\n\n\n\nSteps\n\n\n1. Install docker if not installed already\n\n\nsudo wget -qO- https://get.docker.com/ | sh\n\n\n\n2. Install docker-compose\n\n\nsudo curl -o /usr/local/bin/docker-compose -L \"https://github.com/docker/compose/releases/download/1.11.2/docker-compose-$(uname -s)-$(uname -m)\"\n\n\n\n3. Do a git clone of the deployment\n\n\n git clone  good repo\n\n\n\n4. Create a folder on server and place SSL Certificate files in it\n\n\nCertificates should be named as follows:\n- Keyfile : servicebot.key\n- Certificate : servicebot.crt\n- CA : servicebot_bundle.crt\n\n\n\n5. Configure docker-compose.yaml File\n\n\nFor SMTP Edit and uncommentthe following lines to match\n your SMTP server information\n\n\nSMTP_HOST : \"localhost\"\nSMTP_USER : \"postmaster@localhost\"\nSMTP_PASSWORD : \"password\"\nSMTP_PORT : \"587\"\n\n\n\nFor SSL, uncomment the two SSL lines and change /path/to/ssl/certs/on/server\nto the path on your server`that you created for the certificates\n\n\n  CERTIFICATES: \"./ssl/\"\n  - /path/to/ssl/certs/on/server:/usr/src/app/ssl\n\n\n\n6. Build Images\n\n\ndocker-compose build\n\n\n\n7. Start containers in background:\n\n\ndocker-compose up -d\n\n\n\n8. Access the server with web browser\n\n\n9. Input Stripe Keys\n\n\n10. Input admin account information\n\n\nHelpful commands\n\n\nRestarting all containers:\n\n\ndocker-compose restart\n\n\n\nView logs from all services:\n\n\ndocker-compose logs", 
             "title": "Installation"
         }, 
         {
-            "location": "/usage/", 
+            "location": "/install/#installation-guide", 
+            "text": "Note  This installation requires  docker ,  docker-compose , and  git  be installed on your \nserver    Danger  ServiceBot requires https in order to make api calls with Stripe live mode (test mode will still work),\nEnsure to have a cert on your server if you want to use this in production.  Certificates should be named as follows and placed in a single folder\nnot publically accessible on the host system:\n- Keyfile : servicebot.key\n- Certificate : servicebot.crt\n- CA : servicebot_bundle.crt", 
+            "title": "Installation Guide"
+        }, 
+        {
+            "location": "/install/#steps", 
             "text": "", 
-            "title": "Usage"
+            "title": "Steps"
+        }, 
+        {
+            "location": "/install/#1-install-docker-if-not-installed-already", 
+            "text": "sudo wget -qO- https://get.docker.com/ | sh", 
+            "title": "1. Install docker if not installed already"
+        }, 
+        {
+            "location": "/install/#2-install-docker-compose", 
+            "text": "sudo curl -o /usr/local/bin/docker-compose -L \"https://github.com/docker/compose/releases/download/1.11.2/docker-compose-$(uname -s)-$(uname -m)\"", 
+            "title": "2. Install docker-compose"
+        }, 
+        {
+            "location": "/install/#3-do-a-git-clone-of-the-deployment", 
+            "text": "git clone  good repo", 
+            "title": "3. Do a git clone of the deployment"
+        }, 
+        {
+            "location": "/install/#4-create-a-folder-on-server-and-place-ssl-certificate-files-in-it", 
+            "text": "Certificates should be named as follows:\n- Keyfile : servicebot.key\n- Certificate : servicebot.crt\n- CA : servicebot_bundle.crt", 
+            "title": "4. Create a folder on server and place SSL Certificate files in it"
+        }, 
+        {
+            "location": "/install/#5-configure-docker-composeyaml-file", 
+            "text": "For SMTP Edit and uncommentthe following lines to match\n your SMTP server information  SMTP_HOST : \"localhost\"\nSMTP_USER : \"postmaster@localhost\"\nSMTP_PASSWORD : \"password\"\nSMTP_PORT : \"587\"  For SSL, uncomment the two SSL lines and change /path/to/ssl/certs/on/server\nto the path on your server`that you created for the certificates    CERTIFICATES: \"./ssl/\"\n  - /path/to/ssl/certs/on/server:/usr/src/app/ssl", 
+            "title": "5. Configure docker-compose.yaml File"
+        }, 
+        {
+            "location": "/install/#6-build-images", 
+            "text": "docker-compose build", 
+            "title": "6. Build Images"
+        }, 
+        {
+            "location": "/install/#7-start-containers-in-background", 
+            "text": "docker-compose up -d", 
+            "title": "7. Start containers in background:"
+        }, 
+        {
+            "location": "/install/#8-access-the-server-with-web-browser", 
+            "text": "", 
+            "title": "8. Access the server with web browser"
+        }, 
+        {
+            "location": "/install/#9-input-stripe-keys", 
+            "text": "", 
+            "title": "9. Input Stripe Keys"
+        }, 
+        {
+            "location": "/install/#10-input-admin-account-information", 
+            "text": "", 
+            "title": "10. Input admin account information"
+        }, 
+        {
+            "location": "/install/#helpful-commands", 
+            "text": "", 
+            "title": "Helpful commands"
+        }, 
+        {
+            "location": "/install/#restarting-all-containers", 
+            "text": "docker-compose restart", 
+            "title": "Restarting all containers:"
+        }, 
+        {
+            "location": "/install/#view-logs-from-all-services", 
+            "text": "docker-compose logs", 
+            "title": "View logs from all services:"
+        }, 
+        {
+            "location": "/create_account/", 
+            "text": "Account Creation\n\n\nThere are two ways to add a user to your ServiceBot instance. As an Admin, you can add new users. As a new user to the system you can Sign up.\n\n\n\n\n\n\nAs an Admin\n\n\n\n\nLog in as an Administrator\n\n\nSelect \nManage Services\n -\n \nManage Users\n  \n\n\n\n\nSelect \nActions\n -\n \nInvite New User\n\n\n\n\nEnter new user email address\nTODO Continue here\n\n\n\n\n\n\n\n\nAs a User\n\n\n\n\nFrom the homepage, Select \nSign Up", 
+            "title": "Create Account"
+        }, 
+        {
+            "location": "/create_account/#account-creation", 
+            "text": "There are two ways to add a user to your ServiceBot instance. As an Admin, you can add new users. As a new user to the system you can Sign up.    As an Admin   Log in as an Administrator  Select  Manage Services  -   Manage Users      Select  Actions  -   Invite New User   Enter new user email address\nTODO Continue here     As a User   From the homepage, Select  Sign Up", 
+            "title": "Account Creation"
+        }, 
+        {
+            "location": "/add_payment_method/", 
+            "text": "Adding a Payment method\n\n\nAfter a user has been created in the system, they can view all the public services and manage their account. To be able to request services the user must have a payment method configured.\n\n\n\n\nLog in with a User account\n\n\n\n\nSelect \nBilling\n -\n \nBilling Settings\n\n\n\n\n\n\n\n\nEnter your card information and select \nAdd Payment Method", 
+            "title": "Add a Payment Method"
+        }, 
+        {
+            "location": "/add_payment_method/#adding-a-payment-method", 
+            "text": "After a user has been created in the system, they can view all the public services and manage their account. To be able to request services the user must have a payment method configured.   Log in with a User account   Select  Billing  -   Billing Settings     Enter your card information and select  Add Payment Method", 
+            "title": "Adding a Payment method"
+        }, 
+        {
+            "location": "/create_template/", 
+            "text": "Create a Service Template\n\n\n\n\nLog into an Administrator account\n\n\nSelect \nManage Services\n -\n \nManage Catalog\n\n    \n\n\nSelect \nActions\n -\n \nCreate New Service\n\n    \n\n\n\n\nFill out the form fields provided\n\n\n\n\n\n\n\n\nField Name\n\n\nDescription\n\n\nExample Value\n\n\nPossible Values\n\n\n\n\n\n\n\n\n\n\nService Name\n\n\nName of the service template which will be displayed on the item thumbnail from the homepage catalog\n\n\nSmall Website\n\n\n\n\n\n\n\n\nSummary\n\n\nSummary of the service template which will be displayed on the item thumbnail from the homepage catalog\n\n\nDevelopment of custom small CMS managed website (less than 10 pages)\n\n\n\n\n\n\n\n\nService Details\n\n\nDetailed description of the service template. This will be displayed when a user selects \nview\n from the homepage catalog. You can use html tags in your service details\n\n\nWe can build you a \nstrong\ncustom\n/strong\n website!\n\n\n\n\n\n\n\n\nPublished?\n\n\nWhether or not this service template is to be displayed on the homepage catalog\n\n\nYes\n\n\nYes\n, \nNo\n\n\n\n\n\n\nCategory\n\n\nCategory for the service template to be put in. Templates can be filtered by the category on the homepage catalog\n\n\nWeb Development\n\n\nList available from Categories Created\n\n\n\n\n\n\nTrial Period (Days)\n\n\nNumber of days for a trial period of the service\n\n\n0\n\n\nGreater than 0\n\n\n\n\n\n\nCurrency\n\n\nNumber of days for a trial period of the service\n\n\nUSD\n\n\nAvailable currencies\n\n\n\n\n\n\nService Type\n\n\nSubscription Service - For reoccurring charges.\nOne-Time Service - For one time charges\nCustom Service - For custom services whose prices can change at purchase\n\n\nSubscription Service\n\n\nSubscription Service\n, \nOne-Time Service\n, \nCustom Service\n\n\n\n\n\n\nTrial Period (Days)\n\n\nNumber of days for a trial period of the service\n\n\n0\n\n\nGreater than 0\n\n\n\n\n\n\nService Subscription Amount\n\n\nPrice for the service template\n\n\n2777.68\n\n\nGreater than 0\n\n\n\n\n\n\nSubscription Interval\n\n\nThe time between a reoccurring service\n\n\nMonthly\n\n\nDaily\n, \nWeekly\n, \nMonthly\n, \nYearly\n\n\n\n\n\n\nHow Many \"Interval\"?\n\n\nThe number of occurrences of the service\n\n\n12\n\n\nGreater than 0\n\n\n\n\n\n\nProrated?\n\n\nIf your service billing should include partial time intervals. More on proration \nhere\n\n\nYes\n\n\nYes\n, \nNo\n\n\n\n\n\n\n\n\n\n\n\n\nEnter Custom Fields\n    \n\n\n\n\n\n\n\n\nField Name\n\n\nDescription\n\n\nExample Value\n\n\nPossible Values\n\n\n\n\n\n\n\n\n\n\nLabel\n\n\nThe display value for the field to be displayed in the form\n\n\nWhat's your name?\n\n\n\n\n\n\n\n\nInput Type\n\n\nThe type of input for the field to be displayed in the form\n\n\nText Box\n\n\nText Box\n, \nSelect List\n, \nCheck Box\n\n\n\n\n\n\nDefault Value\n\n\nThe default value for the field to be displayed in the form\n\n\nJeff\n\n\n\n\n\n\n\n\nPrivate?\n\n\nIf this field should be hidden from the form. Can be used to store configuration data or other cross template properties\n\n\nNo\n\n\nYes\n, \nNo\n\n\n\n\n\n\nRequired?\n\n\nIf this field must have a value to submit the request\n\n\nYes\n\n\nYes\n, \nNo\n\n\n\n\n\n\nPrompt User\n\n\nIf this field should be propted for the user to fill out. If this is \"No\" and Private is \"No\", the property name and value will be displayed in the form with no option to change the value\n\n\nNo\n\n\nYes\n, \nNo\n\n\n\n\n\n\n\n\n\n\n\n\nClick \nCreate Service", 
+            "title": "Create a Service Template"
+        }, 
+        {
+            "location": "/create_template/#create-a-service-template", 
+            "text": "Log into an Administrator account  Select  Manage Services  -   Manage Catalog \n      Select  Actions  -   Create New Service \n       Fill out the form fields provided     Field Name  Description  Example Value  Possible Values      Service Name  Name of the service template which will be displayed on the item thumbnail from the homepage catalog  Small Website     Summary  Summary of the service template which will be displayed on the item thumbnail from the homepage catalog  Development of custom small CMS managed website (less than 10 pages)     Service Details  Detailed description of the service template. This will be displayed when a user selects  view  from the homepage catalog. You can use html tags in your service details  We can build you a  strong custom /strong  website!     Published?  Whether or not this service template is to be displayed on the homepage catalog  Yes  Yes ,  No    Category  Category for the service template to be put in. Templates can be filtered by the category on the homepage catalog  Web Development  List available from Categories Created    Trial Period (Days)  Number of days for a trial period of the service  0  Greater than 0    Currency  Number of days for a trial period of the service  USD  Available currencies    Service Type  Subscription Service - For reoccurring charges. One-Time Service - For one time charges Custom Service - For custom services whose prices can change at purchase  Subscription Service  Subscription Service ,  One-Time Service ,  Custom Service    Trial Period (Days)  Number of days for a trial period of the service  0  Greater than 0    Service Subscription Amount  Price for the service template  2777.68  Greater than 0    Subscription Interval  The time between a reoccurring service  Monthly  Daily ,  Weekly ,  Monthly ,  Yearly    How Many \"Interval\"?  The number of occurrences of the service  12  Greater than 0    Prorated?  If your service billing should include partial time intervals. More on proration  here  Yes  Yes ,  No       Enter Custom Fields\n         Field Name  Description  Example Value  Possible Values      Label  The display value for the field to be displayed in the form  What's your name?     Input Type  The type of input for the field to be displayed in the form  Text Box  Text Box ,  Select List ,  Check Box    Default Value  The default value for the field to be displayed in the form  Jeff     Private?  If this field should be hidden from the form. Can be used to store configuration data or other cross template properties  No  Yes ,  No    Required?  If this field must have a value to submit the request  Yes  Yes ,  No    Prompt User  If this field should be propted for the user to fill out. If this is \"No\" and Private is \"No\", the property name and value will be displayed in the form with no option to change the value  No  Yes ,  No       Click  Create Service", 
+            "title": "Create a Service Template"
+        }, 
+        {
+            "location": "/request_service/", 
+            "text": "Request a Service\n\n\nThere are two ways to request a service instance. As an Admin, you can requests instances on behalf of a user. As a new user to the system you can request for yourself. The same process is done for both, except if you requested on behalf of a user it will require approval from the user.\n\n\n\n\nLog into ServiceBot instance\n\n\nSelect \nRequest\n\n\n\n\n\n\nFill in Basic info \nif you are an Administrator\n\n\n\n\n\n\n\n\nField Name\n\n\nDescription\n\n\nExample Value\n\n\nPossible Values\n\n\n\n\n\n\n\n\n\n\nFor Client\n\n\nThe customer who you are requesting on behalf of\n\n\nemail@domain.com\n\n\n\n\n\n\n\n\nName\n\n\nName for the service instance. If you don't provide one the name will be inherited from the template it was requested from\n\n\nSmall Website\n\n\n\n\n\n\n\n\nDescription\n\n\nDescription for the service instance. If you don't provide one the description will be inherited from the template it was requested from\n\n\nemail@domain.com\n\n\n\n\n\n\n\n\n\n\nAdvanced\n\n\n\n\n\n\n\n\nField Name\n\n\nDescription\n\n\nExample Value\n\n\nPossible Values\n\n\n\n\n\n\n\n\n\n\nPublished?\n\n\nWhether or not this service template is to be displayed on the homepage catalog\n\n\nYes\n\n\nYes\n, \nNo\n\n\n\n\n\n\nCategory\n\n\nCategory for the service template to be put in. Templates can be filtered by the category on the homepage catalog\n\n\nWeb Development\n\n\nList available from Categories Created\n\n\n\n\n\n\nTrial Period (Days)\n\n\nNumber of days for a trial period of the service\n\n\n0\n\n\nGreater than 0\n\n\n\n\n\n\nCurrency\n\n\nNumber of days for a trial period of the service\n\n\nUSD\n\n\nAvailable currencies\n\n\n\n\n\n\nService Type\n\n\nSubscription Service - For reoccurring charges.\nOne-Time Service - For one time charges\nCustom Service - For custom services whose prices can change at purchase\n\n\nSubscription Service\n\n\nSubscription Service\n, \nOne-Time Service\n, \nCustom Service\n\n\n\n\n\n\nTrial Period (Days)\n\n\nNumber of days for a trial period of the service\n\n\n0\n\n\nGreater than 0\n\n\n\n\n\n\nService Subscription Amount\n\n\nPrice for the service template\n\n\n2777.68\n\n\nGreater than 0\n\n\n\n\n\n\nSubscription Interval\n\n\nThe time between a reoccurring service\n\n\nMonthly\n\n\nDaily\n, \nWeekly\n, \nMonthly\n, \nYearly\n\n\n\n\n\n\nHow Many \"Interval\"?\n\n\nThe number of occurrences of the service\n\n\n12\n\n\nGreater than 0\n\n\n\n\n\n\nProrated?\n\n\nIf your service billing should include partial time intervals. More on proration \nhere\n\n\nYes\n\n\nYes\n, \nNo\n\n\n\n\n\n\n\n\n\n\n\n\nFill in the custom fields of the form\n\n\n\n\nSelect \nSubmit Request\n\n\n\n\n\n\n(Note: If you are an administrator requesting the service on behalf of a user, the instance will need to be Approved)", 
+            "title": "Request a Service"
+        }, 
+        {
+            "location": "/request_service/#request-a-service", 
+            "text": "There are two ways to request a service instance. As an Admin, you can requests instances on behalf of a user. As a new user to the system you can request for yourself. The same process is done for both, except if you requested on behalf of a user it will require approval from the user.   Log into ServiceBot instance  Select  Request    Fill in Basic info  if you are an Administrator     Field Name  Description  Example Value  Possible Values      For Client  The customer who you are requesting on behalf of  email@domain.com     Name  Name for the service instance. If you don't provide one the name will be inherited from the template it was requested from  Small Website     Description  Description for the service instance. If you don't provide one the description will be inherited from the template it was requested from  email@domain.com      Advanced     Field Name  Description  Example Value  Possible Values      Published?  Whether or not this service template is to be displayed on the homepage catalog  Yes  Yes ,  No    Category  Category for the service template to be put in. Templates can be filtered by the category on the homepage catalog  Web Development  List available from Categories Created    Trial Period (Days)  Number of days for a trial period of the service  0  Greater than 0    Currency  Number of days for a trial period of the service  USD  Available currencies    Service Type  Subscription Service - For reoccurring charges. One-Time Service - For one time charges Custom Service - For custom services whose prices can change at purchase  Subscription Service  Subscription Service ,  One-Time Service ,  Custom Service    Trial Period (Days)  Number of days for a trial period of the service  0  Greater than 0    Service Subscription Amount  Price for the service template  2777.68  Greater than 0    Subscription Interval  The time between a reoccurring service  Monthly  Daily ,  Weekly ,  Monthly ,  Yearly    How Many \"Interval\"?  The number of occurrences of the service  12  Greater than 0    Prorated?  If your service billing should include partial time intervals. More on proration  here  Yes  Yes ,  No       Fill in the custom fields of the form   Select  Submit Request", 
+            "title": "Request a Service"
+        }, 
+        {
+            "location": "/request_service/#note-if-you-are-an-administrator-requesting-the-service-on-behalf-of-a-user-the-instance-will-need-to-be-approved", 
+            "text": "", 
+            "title": "(Note: If you are an administrator requesting the service on behalf of a user, the instance will need to be Approved)"
+        }, 
+        {
+            "location": "/approve_service/", 
+            "text": "If you are a user and an Administrator requested a service on your behalf, then you must approve that service.\n\n\n\n\nLog in with user account\n\n\n\n\nSelect \nMy Services\n\n\n\n\n\n\n\n\nSelect \nApprove\n. Instances awaiting approval will only give you the option of Approve. You can click the instance before approving to view the details of the service.\n\n\n\n\n\n\n\n\nIf you do not have a payment method set up, the system will ask you to add one, or you can follow the \nguide", 
+            "title": "Approve a Service"
+        }, 
+        {
+            "location": "/messaging/", 
+            "text": "Customers can communicate with their service provider by adding messages to their service instances. Users my ask questions about\n\n\n\n\nLog in with user account\n\n\n\n\nSelect \nMy Services\n\n\n\n\n\n\n\n\nSelect an Instance you would like to add a message to\n\n\n\n\n\n\n\n\nAt the bottom of a service instance page there is a text box to enter your message\n\n\n\n\n\n\n\n\nSelect \nComment\n to have your comment added to the instance", 
+            "title": "Messaging"
+        }, 
+        {
+            "location": "/invoice/", 
+            "text": "Log in to ServiceBot\n\n\n\n\nSelect \nBilling\n -\n \nBilling History\n\n\n\n\n\n\n\n\nSelect the Invoice you want to view and Select \nActions\n -\n \nView Invoice\n\n\n\n\n\n\n\n\nThis page provides data such as Total Charged, Date of payment, Line items, and Status", 
+            "title": "View Invoices"
+        }, 
+        {
+            "location": "/refund/", 
+            "text": "", 
+            "title": "Give a Refund"
+        }, 
+        {
+            "location": "/roles/", 
+            "text": "As an Administrator you can modify the permissions of a role\nEach permission corresponds to an API endpoint from our \nREST API\n\n\n\n\nLog in as Administrator\n\n\n\n\nSelect \nManage System\n -\n \nManage Permission\n\n\n\n\n\n\n\n\nCheck the permission you would like the role to have", 
+            "title": "Roles and Permissions"
+        }, 
+        {
+            "location": "/admin_dashboard/", 
+            "text": "", 
+            "title": "Navigate Admin Dashboard"
+        }, 
+        {
+            "location": "/operation_mode/", 
+            "text": "", 
+            "title": "Change operation mode"
+        }, 
+        {
+            "location": "/branding/", 
+            "text": "", 
+            "title": "Change Branding"
+        }, 
+        {
+            "location": "/theme/", 
+            "text": "Log in with Administrator account\n\n\n\n\nSelect \nManage System\n -\n \nSystem Settings\n\n\n\n\n\n\n\n\nThe top section of the page has theme settings\n\n\n\n\n\n\n\n\nChange a color by clicking the color or \n\n\n \n\n\n\n\n\n\nSelect \nUpdate Settings\n to save your changes", 
+            "title": "Change Theme"
+        }, 
+        {
+            "location": "/email_templates/", 
+            "text": "", 
+            "title": "Modify Email Templates"
         }, 
         {
             "location": "/customization/", 
             "text": "", 
             "title": "Customization"
-        }, 
-        {
-            "location": "/release-notes/", 
-            "text": "", 
-            "title": "Release notes"
         }, 
         {
             "location": "/contributing/", 
@@ -86,13 +301,93 @@
             "title": "Submitting a Pull Request (PR)"
         }, 
         {
+            "location": "/plugin/", 
+            "text": "YEAH PLUGINS", 
+            "title": "Creating a plugin"
+        }, 
+        {
             "location": "/roadmap/", 
+            "text": "Roadmap\n\n\nOverview\n\n\nWe have big plans for ServiceBot, below are some of them. If you have an idea \nfor a new feature or think we should prioritize on something else, you can post \non our \ncommunity\n or pop into \ngitter\n.\nThis list is not comprehensive and only details major items on our list. There\nare many many small improvements that will be included with major releases. \n\n\nImmediate goals\n\n\nRefactoring\n\n\nServiceBot is still a bit rough around the edges under the hood, the architecture\nis solid but some of the pieces could be cleaned up.\n\n\nTesting coverage\n\n\nOur current test suite does not cover nearly enough code, we aim to cover all the APIs and start writing \nunit tests for the model layer\n\n\nOpen Issues\n\n\nMajor bugs and issues that arise will be an immediate concern of the ServiceBot team\n\n\n2017 Goals\n\n\nExtensibility Improvements\n\n\nBeing able to extend and develop plugins for ServiceBot is one of our top\npriorities in 2017 - we hope to be able to give developers a clear guide on \nhow to develop and publish plugins for ServiceBot.\n\n\nWordpress Plugin\n\n\nWe want to allow ServiceBot to be used as a backend system that a Wordpress user can connect to using a plugin which pulls ServiceBot services into Wordpress to be consumed by customers.\n\n\nSmarter Forms\n\n\nThe Service Designer lets you build a form for a customer to fill out when requesting a service.\nWe plan on expanding this form design system to allow for more flexibility with features such as price changes based on inputs,\nthe ability to pull external data to populate form elements, and more input options such as date, file upload, and location.\n\n\nFuture Goals\n\n\nLocalization/i18n\n\n\nCurrently ServiceBot is an english language application, we aim to change this by \nadding in support for multiple locales and languages so it will be easy to swap out any language.\n\n\nService Workflows\n\n\nOne of our long term goals is to add more automation capabilities to ServiceBot.\nOne way we plan on doing this is by adding a workflow system to allow users to define the actual steps \nthat are taken in order to fulfill a service and have the workflow run when new services are requested by customers.\n\n\nService Actions\n\n\nWe want there to be actions on a service a user can take, for example a hosting service could have an action to shut down a server, \nor a monthly cleaning service could have an additional action (for a price) which can clean something extra like a garage.", 
+            "title": "Roadmap"
+        }, 
+        {
+            "location": "/roadmap/#roadmap", 
             "text": "", 
             "title": "Roadmap"
         }, 
         {
-            "location": "/license/", 
+            "location": "/roadmap/#overview", 
+            "text": "We have big plans for ServiceBot, below are some of them. If you have an idea \nfor a new feature or think we should prioritize on something else, you can post \non our  community  or pop into  gitter .\nThis list is not comprehensive and only details major items on our list. There\nare many many small improvements that will be included with major releases.", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/roadmap/#immediate-goals", 
             "text": "", 
+            "title": "Immediate goals"
+        }, 
+        {
+            "location": "/roadmap/#refactoring", 
+            "text": "ServiceBot is still a bit rough around the edges under the hood, the architecture\nis solid but some of the pieces could be cleaned up.", 
+            "title": "Refactoring"
+        }, 
+        {
+            "location": "/roadmap/#testing-coverage", 
+            "text": "Our current test suite does not cover nearly enough code, we aim to cover all the APIs and start writing \nunit tests for the model layer", 
+            "title": "Testing coverage"
+        }, 
+        {
+            "location": "/roadmap/#open-issues", 
+            "text": "Major bugs and issues that arise will be an immediate concern of the ServiceBot team", 
+            "title": "Open Issues"
+        }, 
+        {
+            "location": "/roadmap/#2017-goals", 
+            "text": "", 
+            "title": "2017 Goals"
+        }, 
+        {
+            "location": "/roadmap/#extensibility-improvements", 
+            "text": "Being able to extend and develop plugins for ServiceBot is one of our top\npriorities in 2017 - we hope to be able to give developers a clear guide on \nhow to develop and publish plugins for ServiceBot.", 
+            "title": "Extensibility Improvements"
+        }, 
+        {
+            "location": "/roadmap/#wordpress-plugin", 
+            "text": "We want to allow ServiceBot to be used as a backend system that a Wordpress user can connect to using a plugin which pulls ServiceBot services into Wordpress to be consumed by customers.", 
+            "title": "Wordpress Plugin"
+        }, 
+        {
+            "location": "/roadmap/#smarter-forms", 
+            "text": "The Service Designer lets you build a form for a customer to fill out when requesting a service.\nWe plan on expanding this form design system to allow for more flexibility with features such as price changes based on inputs,\nthe ability to pull external data to populate form elements, and more input options such as date, file upload, and location.", 
+            "title": "Smarter Forms"
+        }, 
+        {
+            "location": "/roadmap/#future-goals", 
+            "text": "", 
+            "title": "Future Goals"
+        }, 
+        {
+            "location": "/roadmap/#localizationi18n", 
+            "text": "Currently ServiceBot is an english language application, we aim to change this by \nadding in support for multiple locales and languages so it will be easy to swap out any language.", 
+            "title": "Localization/i18n"
+        }, 
+        {
+            "location": "/roadmap/#service-workflows", 
+            "text": "One of our long term goals is to add more automation capabilities to ServiceBot.\nOne way we plan on doing this is by adding a workflow system to allow users to define the actual steps \nthat are taken in order to fulfill a service and have the workflow run when new services are requested by customers.", 
+            "title": "Service Workflows"
+        }, 
+        {
+            "location": "/roadmap/#service-actions", 
+            "text": "We want there to be actions on a service a user can take, for example a hosting service could have an action to shut down a server, \nor a monthly cleaning service could have an additional action (for a price) which can clean something extra like a garage.", 
+            "title": "Service Actions"
+        }, 
+        {
+            "location": "/release-notes/", 
+            "text": "", 
+            "title": "Release notes"
+        }, 
+        {
+            "location": "/license/", 
+            "text": "Copyright (C) 2017 ServiceBot\n\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\n\nYou should have received a copy of the GNU General Public License\nalong with this program.  If not, see \nhttp://www.gnu.org/licenses/\n.", 
             "title": "License"
         }
     ]

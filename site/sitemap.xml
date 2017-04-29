@@ -4,7 +4,23 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-04-20</lastmod>
+     <lastmod>2017-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/getting_started/</loc>
+     <lastmod>2017-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/reference_guide/</loc>
+     <lastmod>2017-04-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,23 +28,125 @@
     
     <url>
      <loc>/install/</loc>
-     <lastmod>2017-04-20</lastmod>
+     <lastmod>2017-04-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
+        
     <url>
-     <loc>/usage/</loc>
-     <lastmod>2017-04-20</lastmod>
+     <loc>/create_account/</loc>
+     <lastmod>2017-04-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>/add_payment_method/</loc>
+     <lastmod>2017-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/create_template/</loc>
+     <lastmod>2017-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/request_service/</loc>
+     <lastmod>2017-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/approve_service/</loc>
+     <lastmod>2017-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/messaging/</loc>
+     <lastmod>2017-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/invoice/</loc>
+     <lastmod>2017-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/refund/</loc>
+     <lastmod>2017-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/roles/</loc>
+     <lastmod>2017-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/admin_dashboard/</loc>
+     <lastmod>2017-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/operation_mode/</loc>
+     <lastmod>2017-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/branding/</loc>
+     <lastmod>2017-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/theme/</loc>
+     <lastmod>2017-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/email_templates/</loc>
+     <lastmod>2017-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
+        
     <url>
      <loc>/customization/</loc>
-     <lastmod>2017-04-20</lastmod>
+     <lastmod>2017-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/contributing/</loc>
+     <lastmod>2017-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/</loc>
+     <lastmod>2017-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>/roadmap/</loc>
+     <lastmod>2017-04-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -36,23 +154,7 @@
     
     <url>
      <loc>/release-notes/</loc>
-     <lastmod>2017-04-20</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>/contributing/</loc>
-     <lastmod>2017-04-20</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>/roadmap/</loc>
-     <lastmod>2017-04-20</lastmod>
+     <lastmod>2017-04-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -60,7 +162,7 @@
     
     <url>
      <loc>/license/</loc>
-     <lastmod>2017-04-20</lastmod>
+     <lastmod>2017-04-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
