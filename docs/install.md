@@ -29,7 +29,7 @@
 
      git clone https://github.com/service-bot/servicebot-deploy.git
     
-####4. Create a folder on server and place SSL Certificate files in it
+####4. Create a folder on the server and place SSL Certificate files in it
 
     Certificates should be named as follows:
     - Keyfile : servicebot.key
@@ -40,16 +40,15 @@
 
 ####5. Configure docker-compose.yaml File
 
-For SMTP Edit and uncommentthe following lines to match
- your SMTP server information
+For SMTP: Edit and uncomment the following lines to match your SMTP server information
  
     SMTP_HOST : "localhost"
     SMTP_USER : "postmaster@localhost"
     SMTP_PASSWORD : "password"
     SMTP_PORT : "587"
 
-For SSL, uncomment the two SSL lines and change /path/to/ssl/certs/on/server
-to the path on your server`that you created for the certificates
+For SSL: uncomment the two SSL lines and change /path/to/ssl/certs/on/server
+to the path on your server that you created for the certificates
      
       CERTIFICATES: "./ssl/"
       - /path/to/ssl/certs/on/server:/usr/src/app/ssl
@@ -59,7 +58,7 @@ to the path on your server`that you created for the certificates
     
     docker-compose build
 
-####7. Start containers in background:
+####7. Start containers in the background:
     
     docker-compose up -d
     
