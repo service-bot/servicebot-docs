@@ -28,7 +28,7 @@ pages:
       - Change operation mode: operation_mode.md
       - Change Branding: branding.md
       - Change Theme: theme.md
-      - Modify Email Templates: email_templates.md
+#      - Modify Email Templates: email_templates.md
   - Developers:
     - Contributing: contributing.md
     - Embed Service in Existing Site: embed.md
