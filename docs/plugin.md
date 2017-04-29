@@ -1,1 +1,1 @@
-YEAH PLUGINS
+Plugin Development guide coming soons

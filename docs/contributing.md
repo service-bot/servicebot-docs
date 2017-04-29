@@ -3,7 +3,7 @@
 Interested in contributing to the Material theme? Want to report a bug? Before
 you do, make sure to sign the[CLA][5] and please read the following guidelines.
      
-   [5]: https://google.com
+   [5]: https://servicebot.io/cla
       
 ## Submission context
 
@@ -50,8 +50,7 @@ readily available.
 
 We want to fix all the issues as soon as possible, but before fixing a bug we
 need to reproduce and confirm it. In order to reproduce bugs we will
-systematically ask you to provide a minimal reproduction scenario using the
-custom issue template. Please stick to the issue template.
+systematically ask you to provide a minimal reproduction scenario.
 
 Unfortunately we are not able to investigate / fix bugs without a minimal
 reproduction scenario, so if we don't hear back from you we may close the issue.
@@ -62,7 +61,7 @@ Search GitHub for an open or closed PR that relates to your submission. You
 don't want to duplicate effort. If you do not find a related issue or PR,
 go ahead.
 
-1. **Development**: Fork the project, set up the [development environment][4],
+1. **Development**: Fork the project,
   make your changes in a separate git branch and add descriptive messages to
   your commits.
 
@@ -78,4 +77,3 @@ go ahead.
 After your PR is merged, you can safely delete your branch and pull the changes
 from the main (upstream) repository.
 
-  [4]: http://squidfunk.github.io/mkdocs-material/customization/#theme-development
