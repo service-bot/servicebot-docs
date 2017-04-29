@@ -22,16 +22,19 @@ pages:
       - Messaging: messaging.md
       - View Invoices: invoice.md
       - Give a Refund: refund.md
-      - Roles and Permissions: roles.md
+      - Understanding Permissions: permissions.md
+      - Modifying Roles: roles.md
       - Navigate Admin Dashboard: admin_dashboard.md
       - Change operation mode: operation_mode.md
       - Change Branding: branding.md
       - Change Theme: theme.md
       - Modify Email Templates: email_templates.md
   - Developers:
-    - Customization: customization.md
     - Contributing: contributing.md
+    - Embed Service in Existing Site: embed.md
     - Creating a plugin: plugin.md
+    - Customization: customization.md
+    - Application Structure: structure.md
   - Roadmap: roadmap.md
   - Release notes: release-notes.md
   - License: license.md
