@@ -276,8 +276,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-create-a-folder-on-server-and-place-ssl-certificate-files-in-it" title="4. Create a folder on server and place SSL Certificate files in it" class="md-nav__link">
-    4. Create a folder on server and place SSL Certificate files in it
+  <a href="#4-create-a-folder-on-the-server-and-place-ssl-certificate-files-in-it" title="4. Create a folder on the server and place SSL Certificate files in it" class="md-nav__link">
+    4. Create a folder on the server and place SSL Certificate files in it
   </a>
   
 </li>
@@ -297,8 +297,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#7-start-containers-in-background" title="7. Start containers in background:" class="md-nav__link">
-    7. Start containers in background:
+  <a href="#7-start-containers-in-the-background" title="7. Start containers in the background:" class="md-nav__link">
+    7. Start containers in the background:
   </a>
   
 </li>
@@ -486,8 +486,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../roles/" title="Roles and Permissions" class="md-nav__link">
-      Roles and Permissions
+    <a href="../permissions/" title="Understanding Permissions" class="md-nav__link">
+      Understanding Permissions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../roles/" title="Modifying Roles" class="md-nav__link">
+      Modifying Roles
     </a>
   </li>
 
@@ -540,18 +552,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../email_templates/" title="Modify Email Templates" class="md-nav__link">
-      Modify Email Templates
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -582,18 +582,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../customization/" title="Customization" class="md-nav__link">
-      Customization
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../contributing/" title="Contributing" class="md-nav__link">
       Contributing
     </a>
@@ -606,8 +594,44 @@
 
 
   <li class="md-nav__item">
+    <a href="../embed/" title="Embed Service in Existing Site" class="md-nav__link">
+      Embed Service in Existing Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../plugin/" title="Creating a plugin" class="md-nav__link">
       Creating a plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../customization/" title="Customization" class="md-nav__link">
+      Customization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../structure/" title="Application Structure" class="md-nav__link">
+      Application Structure
     </a>
   </li>
 
@@ -703,8 +727,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-create-a-folder-on-server-and-place-ssl-certificate-files-in-it" title="4. Create a folder on server and place SSL Certificate files in it" class="md-nav__link">
-    4. Create a folder on server and place SSL Certificate files in it
+  <a href="#4-create-a-folder-on-the-server-and-place-ssl-certificate-files-in-it" title="4. Create a folder on the server and place SSL Certificate files in it" class="md-nav__link">
+    4. Create a folder on the server and place SSL Certificate files in it
   </a>
   
 </li>
@@ -724,8 +748,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#7-start-containers-in-background" title="7. Start containers in background:" class="md-nav__link">
-    7. Start containers in background:
+  <a href="#7-start-containers-in-the-background" title="7. Start containers in the background:" class="md-nav__link">
+    7. Start containers in the background:
   </a>
   
 </li>
@@ -823,31 +847,30 @@ not publically accessible on the host system:
 <pre><code>sudo curl -o /usr/local/bin/docker-compose -L "https://github.com/docker/compose/releases/download/1.11.2/docker-compose-$(uname -s)-$(uname -m)"
 </code></pre>
 <h4 id="3-do-a-git-clone-of-the-deployment">3. Do a git clone of the deployment</h4>
-<pre><code> git clone  good repo
+<pre><code> git clone https://github.com/service-bot/servicebot-deploy.git
 </code></pre>
-<h4 id="4-create-a-folder-on-server-and-place-ssl-certificate-files-in-it">4. Create a folder on server and place SSL Certificate files in it</h4>
+<h4 id="4-create-a-folder-on-the-server-and-place-ssl-certificate-files-in-it">4. Create a folder on the server and place SSL Certificate files in it</h4>
 <pre><code>Certificates should be named as follows:
 - Keyfile : servicebot.key
 - Certificate : servicebot.crt
 - CA : servicebot_bundle.crt
 </code></pre>
 <h4 id="5-configure-docker-composeyaml-file">5. Configure docker-compose.yaml File</h4>
-<p>For SMTP Edit and uncommentthe following lines to match
- your SMTP server information</p>
+<p>For SMTP: Edit and uncomment the following lines to match your SMTP server information</p>
 <pre><code>SMTP_HOST : "localhost"
 SMTP_USER : "postmaster@localhost"
 SMTP_PASSWORD : "password"
 SMTP_PORT : "587"
 </code></pre>
-<p>For SSL, uncomment the two SSL lines and change /path/to/ssl/certs/on/server
-to the path on your server`that you created for the certificates</p>
+<p>For SSL: uncomment the two SSL lines and change /path/to/ssl/certs/on/server
+to the path on your server that you created for the certificates</p>
 <pre><code>  CERTIFICATES: "./ssl/"
   - /path/to/ssl/certs/on/server:/usr/src/app/ssl
 </code></pre>
 <h4 id="6-build-images">6. Build Images</h4>
 <pre><code>docker-compose build
 </code></pre>
-<h4 id="7-start-containers-in-background">7. Start containers in background:</h4>
+<h4 id="7-start-containers-in-the-background">7. Start containers in the background:</h4>
 <pre><code>docker-compose up -d
 </code></pre>
 <h4 id="8-access-the-server-with-web-browser">8. Access the server with web browser</h4>
@@ -872,73 +895,113 @@ to the path on your server`that you created for the certificates</p>
         </div>
       </main>
       
-        
+        <!--
+  Copyright (c) 2016-2017 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+
+<!-- Application footer -->
 <footer class="md-footer">
-  
+
+    <!-- Link to previous and/or next page -->
+    
     <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../reference_guide/" title="Reference Guide" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+        <nav class="md-footer-nav__inner md-grid">
+
+            <!-- Link to previous page -->
+            
+            <a href="../reference_guide/"
+               title="Reference Guide"
+               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+               rel="prev">
+                <div class="md-flex__cell md-flex__cell--shrink">
+                    <i class="md-icon md-icon--arrow-back
+                    md-footer-nav__button"></i>
+                </div>
+                <div class="md-flex__cell md-flex__cell--stretch
+                  md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
                 Reference Guide
               </span>
-            </div>
-          </a>
-        
-        
-          <a href="../create_account/" title="Create Account" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                </div>
+            </a>
+            
+
+            <!-- Link to next page -->
+            
+            <a href="../create_account/" title="Create Account"
+               class="md-flex md-footer-nav__link md-footer-nav__link--next"
+               rel="next">
+                <div class="md-flex__cell md-flex__cell--stretch
+                  md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
                 Create Account
               </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
+                </div>
+                <div class="md-flex__cell md-flex__cell--shrink">
+                    <i class="md-icon md-icon--arrow-forward
+                    md-footer-nav__button"></i>
+                </div>
+            </a>
+            
+        </nav>
     </div>
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2017 ServiceBot
-          </div>
-        
-        powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
-        and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
-          Material for MkDocs</a>
-      </div>
-      
-        
+    
+
+    <!-- Further information -->
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                
+                <div class="md-footer-copyright__highlight">
+                    Copyright &copy; 2017 ServiceBot
+                </div>
+                
+            </div>
+
+            <!-- Social links -->
+            
+            
   <div class="md-footer-social">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-      <a href="https://github.com/service-bot" class="md-footer-social__link fa fa-github-alt"></a>
+      <a href="https://github.com/service-bot/servicebot-docs" class="md-footer-social__link fa fa-github-alt"></a>
     
       <a href="https://twitter.com/servicebot_io" class="md-footer-social__link fa fa-twitter"></a>
     
   </div>
 
-      
+            
+        </div>
     </div>
-  </div>
 </footer>
       
     </div>
