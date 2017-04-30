@@ -4,7 +4,7 @@ extra:
   logo: "images/logo-white-square.png"
   social:
     - type: github-alt
-      link: https://github.com/service-bot
+      link: https://github.com/service-bot/servicebot-docs
     - type: twitter
       link: https://twitter.com/servicebot_io
 theme_dir: 'theme'
