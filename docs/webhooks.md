@@ -3,8 +3,9 @@
 
 ## Pre-Provision
 #### Description
-This is the 
+This hook is called when a customer first requests a service instance, this stage is good for validation of parameters, logging, and CMDB integration actions such as creating a configuration item.
 #### Triggered By
+Calling [Requesting Service Instance](https://api-docs.servicebot.io/#operation--service-templates--id--request-post)
 #### Example Payload
 ```json
 {
@@ -104,7 +105,9 @@ This is the
 ```
 ## Post-Provision
 #### Description
+In this stage, the service instance finished being created. This is a good hook to listen to if you need to give a user access to your app, or alert third party integrations such as sending a Slack message.
 #### Triggered By
+Completion of [requesting Service Instance](https://api-docs.servicebot.io/#operation--service-templates--id--request-post)
 #### Example Payload
 ```json
 {
