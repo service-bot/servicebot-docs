@@ -54,19 +54,15 @@ to the path on your server that you created for the certificates
       - /path/to/ssl/certs/on/server:/usr/src/app/ssl
 
 
-####6. Build Images
-    
-    docker-compose build
-
-####7. Start containers in the background:
+####6. Start containers in the background:
     
     docker-compose up -d
     
-####8. Access the server with web browser
+####7. Access the server with web browser
       
-####9. Input Stripe Keys
+####8. Input Stripe Keys
 
-####10. Input admin account information
+####9. Input admin account information
 
 
   
