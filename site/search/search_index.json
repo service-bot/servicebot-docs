@@ -1,6 +1,16 @@
 {
     "docs": [
         {
+            "location": "/", 
+            "text": "ServiceBot Introduction\n\n\nServiceBot is an open source ecommerce and automation platform for services. The objective is to bring enterprise level automation to small and medium sized businesses, as well as bringing forth a new e-commerce platform designed around services.\n\n\nServiceBot is built using Javascript and the \nExpress\n framework on \nNode\n. It is both an open source solution and a managed Platform as a Service (PaaS), available at \nservicebot.io\n.", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/#servicebot-introduction", 
+            "text": "ServiceBot is an open source ecommerce and automation platform for services. The objective is to bring enterprise level automation to small and medium sized businesses, as well as bringing forth a new e-commerce platform designed around services.  ServiceBot is built using Javascript and the  Express  framework on  Node . It is both an open source solution and a managed Platform as a Service (PaaS), available at  servicebot.io .", 
+            "title": "ServiceBot Introduction"
+        }, 
+        {
             "location": "/getting_started/", 
             "text": "Getting Started With ServiceBot\n\n\nStripe Setup\n\n\nServiceBot has a very close integration with stripe so each instance \nneeds to have access to Stripe API keys and have Stripe Webhooks setup\nFollow the following steps in order to get everything working\n\n\nCreate Stripe Account\n\n\nGo to \nhttps://dashboard.stripe.com/register\n and register\n\n\nGet Stripe API Keys\n\n\nServiceBot uses Stripe APIs - when prompted in the setup enter the keys on\nthis page \nhttps://dashboard.stripe.com/account/apikeys\n\n\n\n\nNote\n\n\nUse the live mode key if you want real transactions to occur when users\norder services, while in test mode all transactions will be faked in \nStripe.\n\n\n\n\nCreate Stripe webhooks\n\n\nIn order to have ServiceBot and Stripe communicate with each other we need \nto create webhooks in stripe.\n\n\n\n\ngo to \nhttps://dashboard.stripe.com/account/webhooks\n\n\nCreate a new webhook and enter your ServiceBot url and select live mode\nand send all events\n\n\n\n\n\n\n\n\nNote\n\n\nOptionally you can create a test mode webhook if you would like test mode to be \nfully connected to stripe\n\n\n\n\n\n\nStripe will now communicate properly with your server.", 
             "title": "Getting Started"
