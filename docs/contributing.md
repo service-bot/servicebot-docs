@@ -1,10 +1,5 @@
 # Contributing
 
-Interested in contributing to the Material theme? Want to report a bug? Before
-you do, make sure to sign the[CLA][5] and please read the following guidelines.
-     
-   [5]: https://servicebot.io/cla
-      
 ## Submission context
 
 ### Got a question or problem?
