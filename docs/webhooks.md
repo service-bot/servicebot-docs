@@ -7,7 +7,7 @@ This hook is called when a customer first requests a service instance, this stag
 #### Triggered By
 Calling [Requesting Service Instance](https://api-docs.servicebot.io/#operation--service-templates--id--request-post)
 #### Example Payload
-```json
+``` json
 {
   "event_name": "pre_provision",
   "event_data": {
@@ -107,7 +107,7 @@ In this stage, the service instance finished being created. This is a good hook 
 #### Triggered By
 Completion of [requesting Service Instance](https://api-docs.servicebot.io/#operation--service-templates--id--request-post)
 #### Example Payload
-```json
+``` json
 {
   "event_name": "post_provision",
   "event_data": {
@@ -239,7 +239,7 @@ The stage before a property change occurs, in this step you can see the instance
 #### Triggered By
 [Changing the properties](https://api-docs.servicebot.io/#operation--service-instances--id--change-properties-post) on a Service Instance
 #### Example Payload
-```json
+``` json
 {
   "event_name": "pre_property_change",
   "event_data": {
@@ -395,7 +395,7 @@ Called after a property change occurrs, the `instance` will reflect any possible
 #### Triggered By
 Completion of a [property change](https://api-docs.servicebot.io/#operation--service-instances--id--change-properties-post)
 #### Example Payload
-```json
+``` json
 {
   "event_name": "post_property_change",
   "event_data": {
@@ -509,7 +509,7 @@ This is called when the decommission process starts.
 #### Triggered By
 [Cancelling a service instance](https://api-docs.servicebot.io/#operation--service-instances--id--change-properties-post), trial expirations, Stripe incoming webhooks for events such as a missing funding source.
 #### Example Payload
-```json
+``` json
 {
   "event_name": "pre_decommission",
   "event_data": {
@@ -559,7 +559,7 @@ This is when the cancellation has completed, Stripe subscriptions will be suspen
 #### Triggered By
 Cancellation has completed
 #### Example Payload
-```json
+``` json
 {
   "event_name": "post_decommission",
   "event_data": {
@@ -609,7 +609,7 @@ Before an instance is reactivated from cancelled state.
 #### Triggered By
 [Reactivating a service instance](https://api-docs.servicebot.io/#operation--service-instances--id--reactivate-post)
 #### Example Payload
-```json
+``` json
 {
   "event_name": "pre_reactivate",
   "event_data": {
@@ -659,7 +659,7 @@ After an instance is reactivated, changing cancelled state into active state.
 #### Triggered By
 [Completion of reactivating a service instance](https://api-docs.servicebot.io/#operation--service-instances--id--reactivate-post)
 #### Example Payload
-```json
+``` json
 {
   "event_name": "post_reactivate",
   "event_data": {
