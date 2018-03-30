@@ -2,13 +2,6 @@
 
 ## Submission context
 
-### Got a question or problem?
-
-For quick questions there's no need to open an issue as you can reach us on
-[gitter.im][1].
-
-  [1]: https://gitter.im/service-bot
-
 ### Found a bug?
 
 If you found a bug in the source code, you can help us by submitting an issue
