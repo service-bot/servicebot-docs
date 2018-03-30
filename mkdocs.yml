@@ -1,5 +1,7 @@
 site_name: ServiceBot Documentation
-theme: 'material'
+theme:
+  name: 'material'
+  custom_dir: 'theme'
 extra:
   logo: "images/logo-white-square.png"
   social:
@@ -9,7 +11,7 @@ extra:
       link: https://twitter.com/servicebot_io
 theme_dir: 'theme'
 pages:
-  - Introduction: index.md
+#  - Introduction: index.md
   - Getting Started: getting_started.md
   - Reference Guide: reference_guide.md
   - Installation: install.md
@@ -28,6 +30,7 @@ pages:
       - Change operation mode: operation_mode.md
       - Change Branding: branding.md
       - Change Theme: theme.md
+      - Use Webhooks: webhooks.md
 #      - Modify Email Templates: email_templates.md
   - Developers:
     - Contributing: contributing.md
@@ -35,10 +38,10 @@ pages:
     - Creating a plugin: plugin.md
     - Customization: customization.md
     - Application Structure: structure.md
-  - Roadmap: roadmap.md
-  - Release notes: release-notes.md
+ # - Roadmap: roadmap.md
+ # - Release notes: release-notes.md
   - License: license.md
-copyright: 'Copyright &copy; 2017 ServiceBot'
+copyright: 'Copyright &copy; 2018 ServiceBot'
 repo_name: service-bot/servicebot-docs
 repo_url: https://github.com/service-bot/servicebot-docs
 markdown_extensions:
