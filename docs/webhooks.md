@@ -503,18 +503,203 @@ Completion of a [property change](https://api-docs.servicebot.io/#operation--ser
 }
 ```
 ## Pre-Cancellation
+
 #### Description
+This is called when the decommission process starts.
 #### Triggered By
+[Cancelling a service instance](https://api-docs.servicebot.io/#operation--service-instances--id--change-properties-post), trial expirations, Stripe incoming webhooks for events such as a missing funding source.
 #### Example Payload
+```json
+{
+  "event_name": "pre_decommission",
+  "event_data": {
+    "instance": {
+      "id": 1,
+      "service_id": 1,
+      "user_id": 2,
+      "requested_by": 2,
+      "payment_plan": {
+        "id": "MySaaS-ID1-k0n7",
+        "name": "MySaaS",
+        "tiers": null,
+        "amount": 5000,
+        "object": "plan",
+        "created": 1522423730,
+        "product": "prod_CaaKnqpZx23KYL",
+        "currency": "usd",
+        "interval": "month",
+        "livemode": false,
+        "metadata": {},
+        "nickname": null,
+        "tiers_mode": null,
+        "usage_type": "licensed",
+        "billing_scheme": "per_unit",
+        "interval_count": 1,
+        "transform_usage": null,
+        "trial_period_days": null,
+        "statement_descriptor": "asd"
+      },
+      "name": "MySaaS",
+      "description": "MySaaS Super Offering, does everything",
+      "subscription_id": "sub_CZpZ8aABmUjBxk",
+      "subscribed_at": "1522249801",
+      "trial_end": null,
+      "status": "running",
+      "type": "subscription",
+      "split_configuration": null,
+      "created_at": "2018-03-28T15:09:57.818Z",
+      "updated_at": "2018-03-30T15:28:48.474Z"
+    }
+  }
+}
+```
 ## Post-Cancellation
 #### Description
+This is when the cancellation has completed, Stripe subscriptions will be suspeneded at this point.
 #### Triggered By
+Cancellation has completed
 #### Example Payload
+```json
+{
+  "event_name": "post_decommission",
+  "event_data": {
+    "instance": {
+      "id": 1,
+      "service_id": 1,
+      "user_id": 2,
+      "requested_by": 2,
+      "payment_plan": {
+        "id": "MySaaS-ID1-k0n7",
+        "name": "MySaaS",
+        "tiers": null,
+        "amount": 5000,
+        "object": "plan",
+        "created": 1522423730,
+        "product": "prod_CaaKnqpZx23KYL",
+        "currency": "usd",
+        "interval": "month",
+        "livemode": false,
+        "metadata": {},
+        "nickname": null,
+        "tiers_mode": null,
+        "usage_type": "licensed",
+        "billing_scheme": "per_unit",
+        "interval_count": 1,
+        "transform_usage": null,
+        "trial_period_days": null,
+        "statement_descriptor": "asd"
+      },
+      "name": "MySaaS",
+      "description": "MySaaS Super Offering, does everything",
+      "subscription_id": null,
+      "subscribed_at": "1522249801",
+      "trial_end": null,
+      "status": "cancelled",
+      "type": "subscription",
+      "split_configuration": null,
+      "created_at": "2018-03-28T15:09:57.818Z",
+      "updated_at": "2018-03-30T19:55:31.588Z"
+    }
+  }
+}
+```
 ## Pre-Resubscribe
 #### Description
+Before an instance is reactivated from cancelled state.
 #### Triggered By
+[Reactivating a service instance](https://api-docs.servicebot.io/#operation--service-instances--id--reactivate-post)
 #### Example Payload
+```json
+{
+  "event_name": "pre_reactivate",
+  "event_data": {
+    "instance": {
+      "id": 1,
+      "service_id": 1,
+      "user_id": 2,
+      "requested_by": 2,
+      "payment_plan": {
+        "id": "MySaaS-ID1-9b9i",
+        "name": "MySaaS",
+        "tiers": null,
+        "amount": 5000,
+        "object": "plan",
+        "created": 1522441566,
+        "product": "prod_Caf7crCsDCPATU",
+        "currency": "usd",
+        "interval": "month",
+        "livemode": false,
+        "metadata": {},
+        "nickname": null,
+        "tiers_mode": null,
+        "usage_type": "licensed",
+        "billing_scheme": "per_unit",
+        "interval_count": 1,
+        "transform_usage": null,
+        "trial_period_days": null,
+        "statement_descriptor": "asd"
+      },
+      "name": "MySaaS",
+      "description": "MySaaS Super Offering, does everything",
+      "subscription_id": null,
+      "subscribed_at": "1522441567",
+      "trial_end": null,
+      "status": "cancelled",
+      "type": "subscription",
+      "split_configuration": null,
+      "created_at": "2018-03-28T15:09:57.818Z",
+      "updated_at": "2018-03-30T20:26:29.042Z"
+    }
+  }
+}
+```
 ## Post-Resubscribe
 #### Description
+After an instance is reactivated, changing cancelled state into active state.
 #### Triggered By
+[Completion of reactivating a service instance](https://api-docs.servicebot.io/#operation--service-instances--id--reactivate-post)
 #### Example Payload
+```json
+{
+  "event_name": "post_reactivate",
+  "event_data": {
+    "instance": {
+      "id": 1,
+      "service_id": 1,
+      "user_id": 2,
+      "requested_by": 2,
+      "payment_plan": {
+        "id": "MySaaS-ID1-hke9",
+        "object": "plan",
+        "amount": 5000,
+        "billing_scheme": "per_unit",
+        "created": 1522441624,
+        "currency": "usd",
+        "interval": "month",
+        "interval_count": 1,
+        "livemode": false,
+        "metadata": {},
+        "nickname": null,
+        "product": "prod_Caf8uQXSp2XFGI",
+        "tiers": null,
+        "tiers_mode": null,
+        "transform_usage": null,
+        "trial_period_days": null,
+        "usage_type": "licensed",
+        "statement_descriptor": "asd",
+        "name": "MySaaS"
+      },
+      "name": "MySaaS",
+      "description": "MySaaS Super Offering, does everything",
+      "subscription_id": null,
+      "subscribed_at": "1522441567",
+      "trial_end": null,
+      "status": "cancelled",
+      "type": "subscription",
+      "split_configuration": null,
+      "created_at": "2018-03-28T15:09:57.818Z",
+      "updated_at": "2018-03-30T20:27:02.045Z"
+    }
+  }
+}
+```
