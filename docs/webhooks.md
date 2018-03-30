@@ -78,7 +78,6 @@ Calling [Requesting Service Instance](https://api-docs.servicebot.io/#operation-
       "email": "customer@test.com"
     },
     "template": {
-      "data": {
         "id": 1,
         "category_id": 1,
         "created_by": 1,
@@ -98,7 +97,6 @@ Calling [Requesting Service Instance](https://api-docs.servicebot.io/#operation-
         "split_configuration": null,
         "created_at": "2018-03-28T15:09:10.686Z",
         "updated_at": "2018-03-28T15:09:10.686Z"
-      }
     }
   }
 }
@@ -180,7 +178,6 @@ Completion of [requesting Service Instance](https://api-docs.servicebot.io/#oper
       "email": "customer@test.com"
     },
     "template": {
-      "data": {
         "id": 1,
         "category_id": 1,
         "created_by": 1,
@@ -200,10 +197,8 @@ Completion of [requesting Service Instance](https://api-docs.servicebot.io/#oper
         "split_configuration": null,
         "created_at": "2018-03-28T15:09:10.686Z",
         "updated_at": "2018-03-28T15:09:10.686Z"
-      }
     },
     "instance": {
-      "data": {
         "id": 1,
         "service_id": 1,
         "user_id": 2,
@@ -234,16 +229,284 @@ Completion of [requesting Service Instance](https://api-docs.servicebot.io/#oper
         "split_configuration": null,
         "created_at": "2018-03-28T15:09:57.818Z",
         "updated_at": "2018-03-28T15:09:59.828Z"
+    }
+  }
+}
+```
+## Pre-Property-Change
+#### Description
+The stage before a property change occurs, in this step you can see the instance and the updates to the properties.
+#### Triggered By
+[Changing the properties](https://api-docs.servicebot.io/#operation--service-instances--id--change-properties-post) on a Service Instance
+#### Example Payload
+```json
+{
+  "event_name": "pre_property_change",
+  "event_data": {
+    "instance": {
+      "id": 1,
+      "service_id": 1,
+      "user_id": 2,
+      "requested_by": 2,
+      "payment_plan": {
+        "id": "MySaaS-ID1-secn",
+        "name": "MySaaS",
+        "tiers": null,
+        "amount": 7000,
+        "object": "plan",
+        "created": 1522423618,
+        "product": "prod_CaaIL3fbRtJJbq",
+        "currency": "usd",
+        "interval": "month",
+        "livemode": false,
+        "metadata": {},
+        "nickname": null,
+        "tiers_mode": null,
+        "usage_type": "licensed",
+        "billing_scheme": "per_unit",
+        "interval_count": 1,
+        "transform_usage": null,
+        "trial_period_days": null,
+        "statement_descriptor": "asd"
+      },
+      "name": "MySaaS",
+      "description": "MySaaS Super Offering, does everything",
+      "subscription_id": "sub_CZpZ8aABmUjBxk",
+      "subscribed_at": "1522249801",
+      "trial_end": null,
+      "status": "running",
+      "type": "subscription",
+      "split_configuration": null,
+      "created_at": "2018-03-28T15:09:57.818Z",
+      "updated_at": "2018-03-30T15:26:56.343Z",
+      "references": {
+        "service_instance_messages": [],
+        "service_instance_properties": [
+          {
+            "id": 1,
+            "name": "premium",
+            "type": "checkbox",
+            "data": {
+              "value": true
+            },
+            "config": {
+              "pricing": {
+                "value": 2000,
+                "operation": "add"
+              }
+            },
+            "prop_class": null,
+            "prop_label": "Premium",
+            "prop_description": null,
+            "created_at": "2018-03-28T15:09:10.708Z",
+            "updated_at": "2018-03-28T15:09:10.708Z",
+            "parent_id": 1,
+            "private": false,
+            "prompt_user": true,
+            "required": false
+          },
+          {
+            "id": 2,
+            "name": "business-name",
+            "type": "text",
+            "data": {
+              "value": "GreatCompany"
+            },
+            "config": {},
+            "prop_class": null,
+            "prop_label": "Business Name",
+            "prop_description": null,
+            "created_at": "2018-03-28T15:09:10.708Z",
+            "updated_at": "2018-03-28T15:09:10.708Z",
+            "parent_id": 1,
+            "private": false,
+            "prompt_user": true,
+            "required": false
+          }
+        ],
+        "users": [
+          {
+            "id": 2,
+            "role_id": 3,
+            "name": null,
+            "email": "customer@test.com",
+            "provider": "local",
+            "status": "invited",
+            "customer_id": "cus_CZpZrA96UGKecK",
+            "phone": null,
+            "last_login": null,
+            "created_at": "2018-03-28T15:09:57.779Z",
+            "updated_at": "2018-03-28T15:09:57.779Z"
+          }
+        ],
+        "service_instance_cancellations": [],
+        "charge_items": []
+      }
+    },
+    "property_updates": [
+      {
+        "id": 1,
+        "name": "premium",
+        "type": "checkbox",
+        "data": {
+          "value": false
+        },
+        "config": {
+          "pricing": {
+            "value": 2000,
+            "operation": "add"
+          }
+        },
+        "prop_class": null,
+        "prop_label": "Premium",
+        "prop_description": null,
+        "created_at": "2018-03-28T15:09:10.708Z",
+        "updated_at": "2018-03-28T15:09:10.708Z",
+        "parent_id": 1,
+        "private": false,
+        "prompt_user": true,
+        "required": false
+      },
+      {
+        "id": 2,
+        "name": "business-name",
+        "type": "text",
+        "data": {
+          "value": "CoolCompany"
+        },
+        "config": {},
+        "prop_class": null,
+        "prop_label": "Business Name",
+        "prop_description": null,
+        "created_at": "2018-03-28T15:09:10.708Z",
+        "updated_at": "2018-03-28T15:09:10.708Z",
+        "parent_id": 1,
+        "private": false,
+        "prompt_user": true,
+        "required": false
+      }
+    ]
+  }
+}
+```
+## Post-Property-Change
+#### Description
+Called after a property change occurrs, the `instance` will reflect any possible price changes which may have occurred. This is good for detecting when a customer changes their "tier" for example changing to a premium subscription from a basic.
+#### Triggered By
+Completion of a [property change](https://api-docs.servicebot.io/#operation--service-instances--id--change-properties-post)
+#### Example Payload
+```json
+{
+  "event_name": "post_property_change",
+  "event_data": {
+    "instance": {
+      "id": 1,
+      "service_id": 1,
+      "user_id": 2,
+      "requested_by": 2,
+      "payment_plan": {
+        "id": "MySaaS-ID1-k0n7",
+        "name": "MySaaS",
+        "tiers": null,
+        "amount": 5000,
+        "object": "plan",
+        "created": 1522423730,
+        "product": "prod_CaaKnqpZx23KYL",
+        "currency": "usd",
+        "interval": "month",
+        "livemode": false,
+        "metadata": {},
+        "nickname": null,
+        "tiers_mode": null,
+        "usage_type": "licensed",
+        "billing_scheme": "per_unit",
+        "interval_count": 1,
+        "transform_usage": null,
+        "trial_period_days": null,
+        "statement_descriptor": "asd"
+      },
+      "name": "MySaaS",
+      "description": "MySaaS Super Offering, does everything",
+      "subscription_id": "sub_CZpZ8aABmUjBxk",
+      "subscribed_at": "1522249801",
+      "trial_end": null,
+      "status": "running",
+      "type": "subscription",
+      "split_configuration": null,
+      "created_at": "2018-03-28T15:09:57.818Z",
+      "updated_at": "2018-03-30T15:28:48.474Z",
+      "references": {
+        "service_instance_properties": [
+          {
+            "id": 1,
+            "name": "premium",
+            "type": "checkbox",
+            "data": {
+              "value": false
+            },
+            "config": {
+              "pricing": {
+                "value": 2000,
+                "operation": "add"
+              }
+            },
+            "prop_class": null,
+            "prop_label": "Premium",
+            "prop_description": null,
+            "created_at": "2018-03-28T15:09:10.708Z",
+            "updated_at": "2018-03-28T15:09:10.708Z",
+            "parent_id": 1,
+            "private": false,
+            "prompt_user": true,
+            "required": false
+          },
+          {
+            "id": 2,
+            "name": "business-name",
+            "type": "text",
+            "data": {
+              "value": "CoolCompany"
+            },
+            "config": {},
+            "prop_class": null,
+            "prop_label": "Business Name",
+            "prop_description": null,
+            "created_at": "2018-03-28T15:09:10.708Z",
+            "updated_at": "2018-03-28T15:09:10.708Z",
+            "parent_id": 1,
+            "private": false,
+            "prompt_user": true,
+            "required": false
+          }
+        ],
+        "service_instance_messages": [],
+        "users": [
+          {
+            "id": 2,
+            "role_id": 3,
+            "name": null,
+            "email": "customer@test.com",
+            "provider": "local",
+            "status": "invited",
+            "customer_id": "cus_CZpZrA96UGKecK",
+            "phone": null,
+            "last_login": null,
+            "created_at": "2018-03-28T15:09:57.779Z",
+            "updated_at": "2018-03-28T15:09:57.779Z"
+          }
+        ],
+        "service_instance_cancellations": [],
+        "charge_items": []
       }
     }
   }
 }
 ```
-## Pre-Reconfigure
+## Pre-Cancellation
 #### Description
 #### Triggered By
 #### Example Payload
-## Post-Reconfigure
+## Post-Cancellation
 #### Description
 #### Triggered By
 #### Example Payload
@@ -252,14 +515,6 @@ Completion of [requesting Service Instance](https://api-docs.servicebot.io/#oper
 #### Triggered By
 #### Example Payload
 ## Post-Resubscribe
-#### Description
-#### Triggered By
-#### Example Payload
-## Pre-Cancellation
-#### Description
-#### Triggered By
-#### Example Payload
-## Post-Cancellation
 #### Description
 #### Triggered By
 #### Example Payload
