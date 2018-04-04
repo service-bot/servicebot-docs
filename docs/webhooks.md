@@ -1,5 +1,7 @@
 # Managing Webhooks
 
+## Synchronous vs Asynchronous
+Servicebot allows for "synchronous" webhooks. Using synchronous webhooks, when a client makes a request which triggers a webhook, the process will wait until the endpoint responds and attach whatever data the client responded with to the payload the client receives.
 
 ## Pre-Provision
 #### Description
