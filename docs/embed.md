@@ -11,7 +11,7 @@ You can embed a service template request form or a account management page into 
 - You can add additional javascript logic in the `handleResponse` function
 - if the `forceCard` boolean is true, a credit card input will appear even if there is a free trial
 - If you are using synchronous webhooks, any responses from your endpoints will show up in the `handleResponse` payload
-### Manage account Embed
+### Manage account Embed (Add/update card and cancel/reactivate subscription)
 
 !!! warning "Note"
     This embed will require an integration with Servicebot on your server in order to authorize customers securly
