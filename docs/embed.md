@@ -1,32 +1,33 @@
-You can embed a Service Template from your Catalog into another website using iFrames
+# Embedding Servicebot in an existing site/app
+You can embed a service template request form or a account management page into any existing website/application
 
-1. Service template embedding accepts the following URL query:
+### Request Form Embed
 
-Example: /service/1/embed?bodyColor=444444&footerColor=000000&noDate
-
-Options: bodyColor, footerColor, icon = [boolean], noDate, noCost, fullDescription, textColor, requestButton
-
-2. Here is sample HTML for embedding templates from a ServiceBot instance running locally on port 3001
+1. Go to "Manage -> Manage Offerings"
+1. Click on "Actions -> Embed request form" on the template you would like to embed
+1. Copy the HTML given
+1. Paste on your existing site where you would like customers to sign up for your subscription
+##### Tips
+- You can add additional javascript logic in the `handleResponse` function
+- if the `forceCard` boolean is true, a credit card input will appear even if there is a free trial
+- If you are using synchronous webhooks, any responses from your endpoints will show up in the `handleResponse` payload
+### Manage account Embed
+!!! warning "Note" This embed will require some coding on the backend of your site in order to authorize customers properly
+1. Integrate your server with Servicebot so you can generate tokens for specific customers in Servicebot (guide coming soon)
+1. Paste this HTML on a page which can utilize the generated access tokens
 ```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>ServiceBot template Embed example</title>
-</head>
-<body>
-<div>
-    <p>Embeded ServiceBot Template:</p>
-    <iframe src="http://localhost:3001/service/1/embed?bodyColor=4286f4&footerColor=edfcff" frameborder="0" scrolling="no" height="355" width="520"></iframe>
-</div>
-    <p>Without Modification</p>
-    <iframe src="http://localhost:3001/service/2/embed" frameborder="0" scrolling="no" height="355" width="480"></iframe>
-</body>
-</html>
+  <div id="servicebot-management-form"></div>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="/build/servicebot-embed.js" type="text/javascript"></script>
+  <script  type="text/javascript">
+    Servicebot.init({
+        url : "https://your-servicebot-instance.serviceshop.io",
+        selector : document.getElementById('servicebot-management-form'),
+        type : "manage",
+        token: "{{Server generated user token goes here...}}"
+    })
+  </script>
 ```
-
-3. The result of the above HTML is here:
-
-    ![Screenshot](./images/embed.png)
-
-4. The user can select request which will redirect to your ServiceBot instance for checkout
+1. Customers can now add/update a funding source and cancel/reactivate their subscriptions using this page
+##### Tips
+- Using an administrator account, use [this](https://api-docs.servicebot.io/#operation--users--id--token-post) API to get a token for a specific customer
