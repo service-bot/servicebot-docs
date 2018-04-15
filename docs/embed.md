@@ -21,7 +21,7 @@ You can embed a service template request form or a account management page into 
 ```
   <div id="servicebot-management-form"></div>
   <script src="https://js.stripe.com/v3/"></script>
-  <script src="/build/servicebot-embed.js" type="text/javascript"></script>
+  <script src="https://servicebot.io/js/servicebot-embed.js" type="text/javascript"></script>
   <script  type="text/javascript">
     Servicebot.init({
         url : "https://your-servicebot-instance.serviceshop.io",
