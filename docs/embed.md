@@ -12,7 +12,10 @@ You can embed a service template request form or a account management page into 
 - if the `forceCard` boolean is true, a credit card input will appear even if there is a free trial
 - If you are using synchronous webhooks, any responses from your endpoints will show up in the `handleResponse` payload
 ### Manage account Embed
-!!! warning "Note" This embed will require some coding on the backend of your site in order to authorize customers properly
+
+!!! warning "Note"
+    This embed will require an integration with Servicebot on your server in order to authorize customers securly
+
 1. Integrate your server with Servicebot so you can generate tokens for specific customers in Servicebot (guide coming soon)
 1. Paste this HTML on a page which can utilize the generated access tokens
 ```
@@ -28,6 +31,8 @@ You can embed a service template request form or a account management page into 
     })
   </script>
 ```
+1. Make sure the `token` field is populated by an authorization token for a specific customer
+1. Make sure the `url` is pointing to your Servicebot instance url
 1. Customers can now add/update a funding source and cancel/reactivate their subscriptions using this page
 ##### Tips
 - Using an administrator account, use [this](https://api-docs.servicebot.io/#operation--users--id--token-post) API to get a token for a specific customer
