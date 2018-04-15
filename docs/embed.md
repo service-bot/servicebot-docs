@@ -18,7 +18,7 @@ You can embed a service template request form or a account management page into 
 
 1. Integrate your server with Servicebot so you can generate tokens for specific customers in Servicebot (guide coming soon)
 1. Paste this HTML on a page which can utilize the generated access tokens
-```
+```html
   <div id="servicebot-management-form"></div>
   <script src="https://js.stripe.com/v3/"></script>
   <script src="https://servicebot.io/js/servicebot-embed.js" type="text/javascript"></script>
