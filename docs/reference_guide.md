@@ -21,12 +21,6 @@ source in your account.
 ####Service Category
 Service Categories are groupings for Service Templates.
 
-####Transaction
-SHAR
-
-####Invoice
-SHAR
-
 ####System Options
 System options are site wide properties that affect things like branding, colors, and settings like registration being enabled/disabled.
 
