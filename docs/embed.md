@@ -23,5 +23,4 @@ You can embed a service template request form or a account management page into 
 1. Place the client code on the client, and insert the token from the server when a logged in user visits the page
 1. Customers can now add/update a funding source and cancel/reactivate their subscriptions using this page
 ##### Tips
-- Using an administrator account, use [this](https://api-docs.servicebot.io/#operation--users--id--token-post) API to get a token for a specific customer
-- If your language/framework is not available, you can use a JSON Web Token library to generate a token
+- If your language/framework is not available, you can use a JSON Web Token library to generate a token, or, using an administrator account, use [this](https://api-docs.servicebot.io/#operation--users--id--token-post) API to get a token for a specific customer
