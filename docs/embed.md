@@ -31,7 +31,7 @@ You can embed a service template request form or a account management page into 
     })
   </script>
 ```
-1. Make sure the `token` field is populated by an authorization token for a specific customer
+3. Make sure the `token` field is populated by an authorization token for a specific customer
 1. Make sure the `url` is pointing to your Servicebot instance url
 1. Customers can now add/update a funding source and cancel/reactivate their subscriptions using this page
 ##### Tips
