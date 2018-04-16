@@ -14,25 +14,14 @@ You can embed a service template request form or a account management page into 
 ### Manage account Embed (Add/update card and cancel/reactivate subscription)
 
 !!! warning "Note"
-    This embed will require an integration with Servicebot on your server in order to authorize customers securly
+    This embed will require code to be placed in your server
 
-1. Integrate your server with Servicebot so you can generate tokens for specific customers in Servicebot (guide coming soon)
-1. Paste this HTML on a page which can utilize the generated access tokens
-```html
-  <div id="servicebot-management-form"></div>
-  <script src="https://js.stripe.com/v3/"></script>
-  <script src="https://servicebot.io/js/servicebot-embed.js" type="text/javascript"></script>
-  <script  type="text/javascript">
-    Servicebot.init({
-        url : "https://your-servicebot-instance.serviceshop.io",
-        selector : document.getElementById('servicebot-management-form'),
-        type : "manage",
-        token: "{{Server generated user token goes here...}}"
-    })
-  </script>
-```
-3. Make sure the `token` field is populated by an authorization token for a specific customer
-1. Make sure the `url` is pointing to your Servicebot instance url
+1. Go to "Integrations"
+1. Click on `Embed to allow customers to manage thier account and billing settings`
+1. Select your backend language/framework
+1. Place the server code in your server
+1. Place the client code on the client, and insert the token from the server when a logged in user visits the page
 1. Customers can now add/update a funding source and cancel/reactivate their subscriptions using this page
 ##### Tips
 - Using an administrator account, use [this](https://api-docs.servicebot.io/#operation--users--id--token-post) API to get a token for a specific customer
+- If your language/framework is not available, you can use a JSON Web Token library to generate a token
