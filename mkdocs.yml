@@ -23,7 +23,7 @@ pages:
       - Approve a Service: approve_service.md
       - Messaging: messaging.md
       - View Invoices: invoice.md
-      - Give a Refund: refund.md
+     # - Give a Refund: refund.md
       - Understanding Permissions: permissions.md
       - Modifying Roles: roles.md
       - Navigate Admin Dashboard: admin_dashboard.md
