@@ -11,18 +11,18 @@ You can embed a service template request form or a account management page into 
 In the init for a request embed, these are the options which can customize the embed
 
 | Attribute        | Type           | Description  |
-| ------------- |:-------------:| -----:|
+| ------------- |:-------------:| -----|
 | templateId      | number | Id of the template you want to embed |
 | url      | string      |   URL of your servicebot instance |
 | selector | [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)|  The element you want to turn into a form |
 | spk | string | Stripe publishable key |
-| handleResponse | function(response) | a function which gets called after the subscription has been created |
-| forceCard | boolean | if true, the customer will be prompted to enter credit card in order to request service |
-| propertyOverrides | Object | contains a mapping of property machine names to set values, if these properties are being overriden the customer will not get a chance to fill them out. This is usually used to have an embed for a specific pricing tier, you can find the machine name for a property on the service template edit page |
-| hideSummary | boolean | if true, the embed will not include a price summary |
-| hideHeaders | boolean | if true, the embed will not include the service template name and description, only the form |
-| setPassword | boolean | if true, the customer will be asked to enter a password, which you can use to create their account |
-| redirect | string | After the subscription has been requested (and after handleResponse if present,) redirect the customer to this location | 
+| [handleResponse] | function(response) | a function which gets called after the subscription has been created |
+| [forceCard] | boolean | if true, the customer will be prompted to enter credit card in order to request service |
+| [propertyOverrides] | Object | Object with keys being property names and values being the value the property will submit with, if these properties are being overriden the customer will not get a chance to fill them out. This is usually used to have an embed for a specific pricing tier, you can find the machine name for a property on the service template edit page |
+| [hideSummary] | boolean | if true, the embed will not include a price summary |
+| [hideHeaders] | boolean | if true, the embed will not include the service template name and description, only the form |
+| [setPassword] | boolean | if true, the customer will be asked to enter a password, which you can use to create their account |
+| [redirect] | string | After the subscription has been requested (and after handleResponse if present,) redirect the customer to this location | 
 
 ##### Example Request Config
 ```javascript
