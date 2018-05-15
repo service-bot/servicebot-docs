@@ -20,7 +20,7 @@ There are two ways to request a service instance. As an Admin, you can requests 
     | Published? | Whether or not this service template is to be displayed on the homepage catalog | `Yes` | `Yes`, `No` |
     | Category | Category for the service template to be put in. Templates can be filtered by the category on the homepage catalog | `Web Development` | List available from Categories Created |
     | Trial Period (Days) | Number of days for a trial period of the service |  `0` | Greater than 0 |
-    | Currency | Number of days for a trial period of the service |  `USD` | [Available currencies](https://support.stripe.com/questions/which-currencies-does-stripe-support) |
+    | Currency | Currency for the service template |  `USD` | [Available currencies](https://support.stripe.com/questions/which-currencies-does-stripe-support) |
     | Service Type | <ul><li>Subscription Service - For reoccurring charges.</li><li>One-Time Service - For one time charges</li><li>Custom Service - For custom services whose prices can change at purchase</li></ul> |  `Subscription Service` | `Subscription Service`, `One-Time Service`, `Custom Service` |
     | Trial Period (Days) | Number of days for a trial period of the service |  `0` | Greater than 0 |
     | Service Subscription Amount | Price for the service template |  `2777.68` | Greater than 0 |
