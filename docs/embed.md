@@ -3,8 +3,8 @@ You can embed a service template request form or a account management page into 
 
 ### Request Form Embed
 
-1. Go to "Manage -> Manage Offerings"
-1. Click on "Actions -> Embed request form" on the template you would like to embed
+1. Go to "Embeddables -> Checkout"
+1. Select the template and plan you would like to embed
 1. Copy the HTML given
 1. Paste on your existing site where you would like customers to sign up for your subscription
 ##### Request options
@@ -26,7 +26,7 @@ In the init for a request embed, these are the options which can customize the e
 
 ##### Example Request Config
 ```javascript
-    Servicebot.init({
+    Servicebot.Checkout({
         templateId : 1, 
         url : "http://localhost:3000", 
         selector : document.getElementById('servicebot-request-form'),
@@ -34,12 +34,9 @@ In the init for a request embed, these are the options which can customize the e
             await mySaaS.createAccount(response.request.email, response.request.password)
             console.log(response);
         },
-        type: "request",
         spk: "pk_test_2AlebAqTCykOvGc6WGDO5irD", //stripe publishable key
         forceCard : false, 
         setPassword: true,
-        hideHeaders: true,
-        hideSummary: true,
         propertyOverrides : {
             tier: "Basic"
         },
@@ -55,8 +52,8 @@ In the init for a request embed, these are the options which can customize the e
 !!! warning "Note"
     This embed will require code to be placed in your server
 
-1. Go to "Integrations"
-1. Click on `Embed to allow customers to manage thier account and billing settings`
+1. Go to "Embeddables"
+1. Click on `Billing Settings`
 1. Select your backend language/framework
 1. Place the server code in your server
 1. Place the client code on the client, and insert the token from the server when a logged in user visits the page
@@ -75,13 +72,12 @@ In the init for a request embed, these are the options which can customize the e
 
 ##### Example Management Config
 ```javascript
-    Servicebot.init({
+    Servicebot.BillingSettings({
         url : "http://localhost:3000", 
         selector : document.getElementById('servicebot-management-form'),
         handleResponse : (response) => { 
             console.log(response);
         },
-        type: "manage",
         token: "INSERT_TOKEN_HERE",
         disablePlanChange: false
     })
@@ -89,3 +85,47 @@ In the init for a request embed, these are the options which can customize the e
 
 ##### Tips
 - If your language/framework is not available, you can use a JSON Web Token library to generate a token, or, using an administrator account, use [this](https://api-docs.servicebot.io/#operation--users--id--token-post) API to get a token for a specific customer
+
+
+### Pricing Page Embed
+
+!!! warning "Note"
+    This embed is only available for Servicebot customers
+
+1. Go to "Embeddables"
+1. Click on `Pricing`
+1. Copy the HTML given
+1. Paste on your existing site where you would like a pricing page to be generated
+
+##### Pricing Page options
+
+| Attribute        | Type           | Description  |
+| ------------- |:-------------:| -----:|
+| url      | string      |   URL of your servicebot instance |
+| selector | [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)|  The element you want to turn into a form |
+| handleResponse | function(response) | a function which gets called after checkout occurs |
+| spk | string | Stripe publishable key |
+| [forceCard] | boolean | if true, the customer will be prompted to enter credit card in order to request service |
+| [propertyOverrides] | Object | Object with keys being property names and values being the value the property will submit with, if these properties are being overriden the customer will not get a chance to fill them out. This is usually used to have an embed for a specific pricing tier, you can find the machine name for a property on the service template edit page |
+| [hideSummary] | boolean | if true, the embed will not include a price summary |
+| [hideHeaders] | boolean | if true, the embed will not include the service template name and description, only the form |
+| [setPassword] | boolean | if true, the customer will be asked to enter a password, which you can use to create their account |
+| [redirect] | string | After the subscription has been requested (and after handleResponse if present,) redirect the customer to this location | 
+
+##### Example Pricing Page Config
+```javascript
+    Servicebot.Tiers({
+        url : "http://localhost:3000", 
+        selector : document.getElementById('servicebot-management-form'),
+        handleResponse : (response) => { 
+            console.log(response);
+        },
+        spk: "pk_test_2AlebAqTCykOvGc6WGDO5irD", //stripe publishable key
+        forceCard : false, 
+        setPassword: true,
+        propertyOverrides : {
+            tier: "Basic"
+        },
+        redirect: "https://mysaas.com/dashboard"
+    })
+```
