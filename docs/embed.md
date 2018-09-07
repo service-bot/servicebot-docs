@@ -8,14 +8,14 @@ You can embed a service template request form or a account management page into 
 1. Copy the HTML given
 1. Paste on your existing site where you would like customers to sign up for your subscription
 ##### Request options
-In the init for a request embed, these are the options which can customize the embed
+In the config for a request embed, these are the options which can customize the embed
 
 | Attribute        | Type           | Description  |
 | ------------- |:-------------:| -----|
 | templateId      | number | Id of the template you want to embed |
 | url      | string      |   URL of your servicebot instance |
 | selector | [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)|  The element you want to turn into a form |
-| spk | string | Stripe publishable key |
+| paymentStructureTemplateId | number | Payment Structure to purchase |
 | [handleResponse] | function(response) | a function which gets called after the subscription has been created |
 | [forceCard] | boolean | if true, the customer will be prompted to enter credit card in order to request service |
 | [propertyOverrides] | Object | Object with keys being property names and values being the value the property will submit with, if these properties are being overriden the customer will not get a chance to fill them out. This is usually used to have an embed for a specific pricing tier, you can find the machine name for a property on the service template edit page |
@@ -23,24 +23,25 @@ In the init for a request embed, these are the options which can customize the e
 | [hideHeaders] | boolean | if true, the embed will not include the service template name and description, only the form |
 | [setPassword] | boolean | if true, the customer will be asked to enter a password, which you can use to create their account |
 | [redirect] | string | After the subscription has been requested (and after handleResponse if present,) redirect the customer to this location | 
+| [email] | string | Set the email field | 
+
 
 ##### Example Request Config
 ```javascript
     Servicebot.Checkout({
-        templateId : 1, 
+        templateId : 1,
+        paymentStructureTemplateId: 4,
         url : "http://localhost:3000", 
         selector : document.getElementById('servicebot-request-form'),
         handleResponse : async (response) => { //handleResponse can return a promise to be resolved before redirect happens
             await mySaaS.createAccount(response.request.email, response.request.password)
             console.log(response);
         },
-        spk: "pk_test_2AlebAqTCykOvGc6WGDO5irD", //stripe publishable key
         forceCard : false, 
         setPassword: true,
         propertyOverrides : {
-            tier: "Basic"
-        },
-        redirect: "https://mysaas.com/dashboard"
+            businessName: "MyBiz"
+        }
     })
 ```
 
@@ -104,28 +105,31 @@ In the init for a request embed, these are the options which can customize the e
 | url      | string      |   URL of your servicebot instance |
 | selector | [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)|  The element you want to turn into a form |
 | handleResponse | function(response) | a function which gets called after checkout occurs |
-| spk | string | Stripe publishable key |
+| templateId | integer | Id of the template you want to display the pricing page for |
 | [forceCard] | boolean | if true, the customer will be prompted to enter credit card in order to request service |
 | [propertyOverrides] | Object | Object with keys being property names and values being the value the property will submit with, if these properties are being overriden the customer will not get a chance to fill them out. This is usually used to have an embed for a specific pricing tier, you can find the machine name for a property on the service template edit page |
 | [hideSummary] | boolean | if true, the embed will not include a price summary |
 | [hideHeaders] | boolean | if true, the embed will not include the service template name and description, only the form |
 | [setPassword] | boolean | if true, the customer will be asked to enter a password, which you can use to create their account |
 | [redirect] | string | After the subscription has been requested (and after handleResponse if present,) redirect the customer to this location | 
+| [handleCheckout] | function(paymentPlanId) | Allows for custom actions when a customer selects a tier, good for redirecting to a different checkout page | 
+| [email] | string | Set if you want to prefill the email |
+| [paymentStructureTemplateId] | integer | If set, sends customer directly to checkout for this payment plan |
+
 
 ##### Example Pricing Page Config
 ```javascript
     Servicebot.Tiers({
-        url : "http://localhost:3000", 
+        url : "https://example.serviceshop.io", 
+        templateId: 5,
         selector : document.getElementById('servicebot-management-form'),
         handleResponse : (response) => { 
             console.log(response);
         },
-        spk: "pk_test_2AlebAqTCykOvGc6WGDO5irD", //stripe publishable key
         forceCard : false, 
         setPassword: true,
         propertyOverrides : {
             tier: "Basic"
-        },
-        redirect: "https://mysaas.com/dashboard"
+        }
     })
 ```
