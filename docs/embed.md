@@ -24,6 +24,7 @@ In the config for a request embed, these are the options which can customize the
 | [setPassword] | boolean | if true, the customer will be asked to enter a password, which you can use to create their account |
 | [redirect] | string | After the subscription has been requested (and after handleResponse if present,) redirect the customer to this location | 
 | [email] | string | Set the email field | 
+| [token] | string | JSON Web Token for the user you want to make the request with, set this if you want to request subscriptions with existing users |
 
 
 ##### Example Request Config
@@ -115,7 +116,7 @@ In the init for a request embed, these are the options which can customize the e
 | [handleCheckout] | function(paymentPlanId) | Allows for custom actions when a customer selects a tier, good for redirecting to a different checkout page | 
 | [email] | string | Set if you want to prefill the email |
 | [paymentStructureTemplateId] | integer | If set, sends customer directly to checkout for this payment plan |
-
+| [token] | string | JSON Web Token for the user you want to make the request with, set this if you want to request subscriptions with existing users |
 
 ##### Example Pricing Page Config
 ```javascript
