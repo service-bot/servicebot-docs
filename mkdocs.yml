@@ -11,6 +11,7 @@ extra:
       link: https://twitter.com/servicebot_io
 theme_dir: 'theme'
 pages:
+  - Introduction: index.md
   - Embeddables
     - Checkout: checkout-embed.md
     - Pricing: pricing-embed.md
