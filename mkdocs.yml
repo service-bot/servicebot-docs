@@ -12,7 +12,7 @@ extra:
 theme_dir: 'theme'
 pages:
   - Introduction: index.md
-  - Embeddables
+  - Embeddables:
     - Checkout: checkout-embed.md
     - Pricing: pricing-embed.md
     - Billing Settings: billing-settings-embed.md
