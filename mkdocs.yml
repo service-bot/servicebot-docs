@@ -11,36 +11,22 @@ extra:
       link: https://twitter.com/servicebot_io
 theme_dir: 'theme'
 pages:
-  - Introduction: index.md
-  - Getting Started: getting_started.md
-  - Reference Guide: reference_guide.md
-  - Installation: install.md
-  - Usage:
-      - Create Account: create_account.md
-      - Add a Payment Method: add_payment_method.md
-      - Create a Service Template: create_template.md
-      - Request a Service: request_service.md
-      - Approve a Service: approve_service.md
-      - Messaging: messaging.md
-      - View Invoices: invoice.md
-     # - Give a Refund: refund.md
-      - Understanding Permissions: permissions.md
-      - Modifying Roles: roles.md
-      - Navigate Admin Dashboard: admin_dashboard.md
-      - Change operation mode: operation_mode.md
-      - Change Branding: branding.md
-      - Change Theme: theme.md
-      - Use Webhooks: webhooks.md
-#      - Modify Email Templates: email_templates.md
+  - Embeddables
+    - Checkout: checkout-embed.md
+    - Pricing: pricing-embed.md
+    - Billing Settings: billing-settings-embed.md
+    - Login: login-embed.md
+    - Seat Management: seat-management-embed.md
+  - Webhooks: webhooks.md
   - Developers:
-    - Contributing: contributing.md
-    - Embed Service in Existing Site: embed.md
-    - Creating a plugin: plugin.md
-    - Customization: customization.md
-    - Application Structure: structure.md
+    - Installation: install.md
+#     - Embed Service in Existing Site: embed.md
+#     - Creating a plugin: plugin.md
+#     - Customization: customization.md
+#     - Application Structure: structure.md
  # - Roadmap: roadmap.md
  # - Release notes: release-notes.md
-  - License: license.md
+#   - License: license.md
 copyright: 'Copyright &copy; 2018 ServiceBot'
 repo_name: service-bot/servicebot-docs
 repo_url: https://github.com/service-bot/servicebot-docs
