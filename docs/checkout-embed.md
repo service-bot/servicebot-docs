@@ -1,10 +1,10 @@
-### Checkout Embed
+# Checkout Embed
 
 1. Go to "Embeddables -> Checkout"
 1. Select the template and plan you would like to embed
 1. Copy the HTML given
 1. Paste on your existing site where you would like customers to sign up for your subscription
-##### Checkout options
+## Checkout options
 In the config for a request embed, these are the options which can customize the embed
 
 | Attribute        | Type           | Description  |
@@ -22,7 +22,7 @@ In the config for a request embed, these are the options which can customize the
 | [token] | string | JSON Web Token for the user you want to make the request with, set this if you want to request subscriptions with existing users |
 
 
-##### Example Request Config
+## Example Request Config
 ```javascript
     Servicebot.Checkout({
         templateId : 1,
@@ -41,6 +41,7 @@ In the config for a request embed, these are the options which can customize the
     })
 ```
 
-##### Tips
+## Tips
 - You can add additional javascript logic in the `handleResponse` function
 - If you are using synchronous webhooks, any responses from your endpoints will show up in the `handleResponse` payload
+- If you pass a token to the checkout, the form will make a request as the user whom the token was generated for

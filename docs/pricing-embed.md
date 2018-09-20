@@ -1,11 +1,11 @@
-### Pricing Page Embed
+# Pricing Page Embed
 
 1. Go to "Embeddables"
 1. Click on `Pricing`
 1. Copy the HTML given
 1. Paste on your existing site where you would like a pricing page to be generated
 
-##### Pricing Page options
+## Pricing Page options
 
 | Attribute        | Type           | Description  |
 | ------------- |:-------------:| -----:|
@@ -22,7 +22,7 @@
 | [paymentStructureTemplateId] | integer | If set, sends customer directly to checkout for this payment plan |
 | [token] | string | JSON Web Token for the user you want to make the request with, set this if you want to request subscriptions with existing users |
 
-##### Example Pricing Page Config
+## Example Pricing Page Config
 ```javascript
     Servicebot.Tiers({
         url : "https://example.serviceshop.io", 
@@ -38,3 +38,6 @@
         }
     })
 ```
+## Tips
+- Any options that can be passed to the [checkout embed](https://docs.servicebot.io/checkout-embed) can be passed to the pricing embed, and will be applied to the checkout form that is used when a customer picks a pricing plan. 
+- use the handleCheckout function if you want to use your own checkout flow instead of the Servicebot generated one
