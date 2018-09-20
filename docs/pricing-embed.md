@@ -1,8 +1,5 @@
 ### Pricing Page Embed
 
-!!! warning "Note"
-    This embed is only available for Servicebot customers
-
 1. Go to "Embeddables"
 1. Click on `Pricing`
 1. Copy the HTML given
