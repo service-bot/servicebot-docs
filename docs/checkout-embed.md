@@ -20,7 +20,7 @@ In the config for a request embed, these are the options which can customize the
 | [redirect] | string | After the subscription has been requested (and after handleResponse if present,) redirect the customer to this location | 
 | [email] | string | Set the email field | 
 | [token] | string | JSON Web Token for the user you want to make the request with, set this if you want to request subscriptions with existing users |
-
+| [googleScope] | string | the scopes requested of the client when using google authentication, should be a list of scopes seperated by spaces, defaults to "profile email", you can find a list of scopes [here](https://developers.google.com/identity/protocols/googlescopes)
 
 ## Example Request Config
 ```javascript
