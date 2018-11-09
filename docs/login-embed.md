@@ -19,7 +19,7 @@
 | [accessType] | string | if set to "offline", a refresh_token will be generated and attached to the user object instead of the traditional access_token. The oauthResponse attribute will contain a useless code that was consumed by the server to generate the refresh_token. offline access also disables traditional username/password authentication. 
 
 
-## Example Pricing Page Config
+## Example Login Config
 ```javascript
     Servicebot.Login({
         url : "https://example.serviceshop.io", 
